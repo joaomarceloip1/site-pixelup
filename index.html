@@ -2,430 +2,1778 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pixel Up — Agência Digital | Sites, Landing Pages e Sistemas Web</title>
-<meta name="description" content="Pixel Up: sites, landing pages e sistemas web sob medida para empresas. Ipaumirim-CE, atendimento para todo o Brasil.">
-<meta property="og:title" content="Pixel Up — Seu negócio no topo da internet">
-<meta property="og:description" content="Sites, landing pages e sistemas web sob medida para empresas.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1C1917">
+<title>Painel · Pixel Up</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F97316'/%3E%3Ctext x='46' y='76' font-family='Arial Black,sans-serif' font-weight='900' font-size='72' fill='white' text-anchor='middle'%3EP%3C/text%3E%3Crect x='66' y='18' width='18' height='18' rx='3' fill='%231C1917'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#1C1917}
-a{color:#FFFFFF}a:hover{color:#F97316}
-html{scroll-behavior:smooth}
-.txt-curto{display:none}
-@media (max-width: 760px){
-.nav-link{display:none !important}
-.txt-longo{display:none}
-.txt-curto{display:inline}
-.cta-topo{padding:10px 14px !important;font-size:13px !important}
-.hero{padding-top:40px !important;padding-bottom:56px !important}
-section{scroll-margin-top:80px}
-[style*="padding: 96px 24px"]{padding-top:64px !important;padding-bottom:64px !important}
-h1{letter-spacing:-1px !important}
-.escada{padding:32px 20px 24px !important}
-.escada [style*="width: 50px"]{width:36px !important;height:36px !important}
-.escada [style*="height: 300px"]{height:auto !important;gap:7px !important}
-.cta-final{padding:36px 24px !important}
-.cta-final h2{font-size:32px !important}
-.cta-final a{padding:16px 24px !important;font-size:16px !important}
+:root{
+  --bg:#141210; --surface:#1C1917; --raised:#292524; --line:#33302D; --muted:#44403C;
+  --ink:#FFFFFF; --ink2:#D6D3D1; --ink3:#A8A29E;
+  --brand:#F97316; --brand-soft:rgba(249,115,22,.12); --on-brand:#1C1917;
+  --ok:#4ADE80; --ok-soft:rgba(74,222,128,.12);
+  --warn:#FBBF24; --warn-soft:rgba(251,191,36,.12);
+  --late:#F87171; --late-soft:rgba(248,113,113,.12);
+  --info:#93C5FD; --info-soft:rgba(147,197,253,.12);
+  --r:16px; --side:252px;
 }
-</style>
-<style>
 *{box-sizing:border-box}
-html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-.faq summary::-webkit-details-marker{display:none}
-.faq .sinal::before{content:"+"}
-.faq[open] .sinal::before{content:"−"}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;-webkit-text-size-adjust:100%;font-size:15px}
+button,input,select,textarea{font-family:inherit;font-size:15px}
+a{color:var(--brand)}
+.hidden{display:none !important}
+svg{flex-shrink:0}
+
+/* ---------- marca ---------- */
+.selo{position:relative;width:38px;height:38px;border-radius:50%;background:var(--brand);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;flex-shrink:0}
+.selo b{font-size:27px;font-weight:900;line-height:1;color:#fff;margin-top:-2px}
+.selo i{position:absolute;top:7px;right:5px;width:9px;height:9px;border-radius:2px;background:var(--surface);display:flex;align-items:center;justify-content:center}
+.selo i::after{content:"";width:3px;height:3px;border-top:1.5px solid #fff;border-left:1.5px solid #fff;transform:rotate(45deg);margin-top:2px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.marca .txt{display:flex;flex-direction:column;gap:4px}
+.wordmark{font-size:21px;font-weight:700;letter-spacing:-1px;line-height:1}
+.wordmark span{color:var(--brand)}
+.marca small{font-size:9px;letter-spacing:.35em;color:var(--ink3);line-height:1}
+
+/* ---------- login ---------- */
+#login{min-height:100vh;display:grid;grid-template-columns:1fr;background:var(--bg)}
+@media(min-width:900px){#login{grid-template-columns:1.1fr 1fr}}
+.login-arte{display:none;background:var(--surface);padding:56px;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
+@media(min-width:900px){.login-arte{display:flex}}
+.login-arte h2{font-size:44px;line-height:1.05;letter-spacing:-1.5px;margin:0;max-width:440px}
+.login-arte h2 span{color:var(--brand)}
+.escada{display:flex;align-items:flex-end;gap:8px}
+.escada div{display:flex;flex-direction:column;gap:8px}
+.escada span{width:40px;height:40px;border-radius:6px;background:var(--raised)}
+.escada span.topo{background:var(--muted)}
+.escada span.up{background:var(--brand)}
+.login-form{display:flex;align-items:center;justify-content:center;padding:24px}
+.login-card{width:100%;max-width:380px;display:flex;flex-direction:column;gap:16px}
+.login-card h1{margin:20px 0 0;font-size:26px;letter-spacing:-.5px}
+.login-card p{margin:0;color:var(--ink3);font-size:14px}
+.erro{color:var(--late);font-size:14px;min-height:20px}
+
+/* ---------- layout ---------- */
+.layout{display:flex;height:100vh;overflow:hidden}
+.sidebar{width:var(--side);background:var(--surface);border-right:1px solid var(--line);position:fixed;inset:0 auto 0 0;display:flex;flex-direction:column;padding:20px 14px;z-index:40;transition:transform .2s;overflow:hidden}
+.sidebar .marca{padding:4px 8px 24px;flex-shrink:0}
+.menu{display:flex;flex-direction:column;gap:4px;flex:1;overflow-y:auto;overflow-x:hidden;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu-titulo{font-size:11px;letter-spacing:.2em;color:var(--ink3);padding:14px 12px 6px}
+.menu button{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;color:var(--ink2);padding:11px 12px;border-radius:10px;font-weight:500;cursor:pointer;text-align:left;min-height:44px}
+.menu button:hover{background:var(--raised);color:var(--ink)}
+.menu button.ativo{background:var(--brand-soft);color:var(--brand);font-weight:600}
+.menu .badge{margin-left:auto;background:var(--late);color:var(--on-brand);font-size:11px;font-weight:700;border-radius:999px;padding:1px 8px}
+.side-rodape{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:4px;flex-shrink:0}
+.conta{display:flex;align-items:center;gap:10px;padding:8px 12px;font-size:13px;color:var(--ink3);overflow:hidden}
+.conta b{color:var(--ink);font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--raised);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand);flex-shrink:0}
+
+.principal{flex:1;margin-left:var(--side);min-width:0;display:flex;flex-direction:column;height:100vh;overflow-y:auto;overflow-x:hidden}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(20,18,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);flex-shrink:0}
+.topbar-in{display:flex;align-items:center;gap:14px;padding:14px 28px;min-height:72px}
+.topbar h1{margin:0;font-size:20px;letter-spacing:-.4px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .sub{display:block;font-size:12px;font-weight:400;color:var(--ink3);letter-spacing:0;margin-top:2px}
+.so-mobile{display:none !important}
+.banner-demo{background:#3B1D06;color:#FED7AA;font-size:13px;padding:8px 28px;border-bottom:1px solid #5A2A0A}
+main{padding:24px 28px 48px;max-width:1320px;width:100%;flex:1}
+
+@media(max-width:899px){
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.aberta{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.55)}
+  .principal{margin-left:0}
+  .topbar-in{padding:10px 16px;min-height:62px}
+  .so-mobile{display:inline-flex !important}
+  .so-desk{display:none !important}
+  main{padding:18px 16px 110px}
+  .banner-demo{padding:8px 16px}
+}
+
+/* navegação de baixo no celular */
+.bottomnav{display:none}
+@media(max-width:899px){
+  .bottomnav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:35;background:var(--surface);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .bottomnav button{background:none;border:0;color:var(--ink3);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:500;padding:6px 0;cursor:pointer;min-height:48px}
+  .bottomnav button.ativo{color:var(--brand)}
+  .bottomnav .mais{width:46px;height:46px;border-radius:14px;background:var(--brand);color:var(--on-brand);display:flex;align-items:center;justify-content:center;margin:-2px auto 0}
+}
+
+/* ---------- botões ---------- */
+.btn{border:0;border-radius:10px;padding:10px 16px;font-weight:600;cursor:pointer;min-height:42px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;white-space:nowrap}
+.btn-brand{background:var(--brand);color:var(--on-brand)}
+.btn-brand:hover{background:#FB8A3C}
+.btn-ghost{background:var(--raised);color:var(--ink)}
+.btn-ghost:hover{background:var(--muted)}
+.btn-line{background:none;color:var(--ink);border:1px solid var(--muted)}
+.btn-perigo{background:none;color:var(--late);border:1px solid rgba(248,113,113,.35)}
+.btn-sm{padding:7px 12px;min-height:36px;font-size:13px}
+.icon-btn{background:var(--raised);border:0;color:var(--ink);width:42px;height:42px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+.icon-btn:hover{background:var(--muted)}
+
+/* ---------- cartões ---------- */
+.painel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.painel-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px 0}
+.painel-h h2{margin:0;font-size:16px;letter-spacing:-.2px}
+.painel-h span{font-size:12px;color:var(--ink3)}
+.painel-b{padding:16px 20px 20px}
+.grid-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:16px}
+@media(max-width:1100px){.grid-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.grid-kpi{gap:10px}}
+.kpi{padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.kpi-top{display:flex;align-items:center;justify-content:space-between;color:var(--ink3);font-size:13px;font-weight:500}
+.kpi-ico{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--brand-soft);color:var(--brand)}
+.kpi .n{font-size:26px;font-weight:700;letter-spacing:-1px;line-height:1.1}
+.kpi .d{font-size:12px;color:var(--ink3)}
+@media(max-width:420px){.kpi{padding:14px}.kpi .n{font-size:20px}}
+.grid-2{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:16px;margin-bottom:16px}
+@media(max-width:1100px){.grid-2{grid-template-columns:1fr}}
+
+/* gráfico de colunas */
+.grafico{position:relative;height:220px;display:flex;flex-direction:column}
+.graf-area{flex:1;display:flex;align-items:flex-end;gap:2px;border-bottom:1px solid var(--muted);position:relative}
+.graf-area .linha-grade{position:absolute;left:0;right:0;border-top:1px dashed var(--line);pointer-events:none}
+.graf-area .linha-grade span{position:absolute;left:0;top:-16px;font-size:11px;color:var(--ink3)}
+.graf-col{flex:1;height:100%;display:flex;align-items:flex-end;justify-content:center;cursor:default;position:relative;padding:0 6px}
+.graf-col .barra{flex:0 1 44px;background:var(--brand);border-radius:4px 4px 0 0;min-height:2px}
+.graf-col.atual .barra{background:var(--brand)}
+.graf-col:not(.atual) .barra{opacity:.55}
+.graf-col:hover .barra{opacity:1}
+.graf-rot{display:flex;gap:2px;padding-top:8px}
+.graf-rot span{flex:1;text-align:center;font-size:12px;color:var(--ink3);text-transform:capitalize}
+.dica{position:absolute;z-index:5;background:var(--ink);color:var(--surface);font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px;pointer-events:none;white-space:nowrap;transform:translate(-50%,-100%);margin-top:-8px}
+
+/* funil horizontal */
+.funil-barras{display:flex;flex-direction:column;gap:14px}
+.fb-linha{display:grid;grid-template-columns:130px 1fr 34px;align-items:center;gap:12px;font-size:13px}
+.fb-linha .nome{color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fb-trilho{height:12px;background:var(--raised);border-radius:4px;overflow:hidden}
+.fb-trilho div{height:100%;background:var(--brand);border-radius:0 4px 4px 0;min-width:2px}
+.fb-linha b{text-align:right}
+
+/* listas */
+.lista-acoes{display:flex;flex-direction:column}
+.acao-item{display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--line);cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;color:inherit;text-align:left;width:100%}
+.acao-item:first-child{border-top:0}
+.acao-item:hover .t1{color:var(--brand)}
+.acao-data{width:52px;flex-shrink:0;text-align:center;border-radius:10px;background:var(--raised);padding:6px 0;line-height:1.1}
+.acao-data b{display:block;font-size:17px}
+.acao-data small{font-size:11px;color:var(--ink3);text-transform:uppercase}
+.acao-data.late{background:var(--late-soft)} .acao-data.late b,.acao-data.late small{color:var(--late)}
+.acao-data.hoje{background:var(--warn-soft)} .acao-data.hoje b,.acao-data.hoje small{color:var(--warn)}
+.acao-item .tx{flex:1;min-width:0}
+.t1{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t2{font-size:13px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vazio{color:var(--ink3);font-size:14px;padding:28px 12px;text-align:center}
+
+/* etiquetas de etapa */
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.tag::before{content:"";width:6px;height:6px;border-radius:2px;background:currentColor}
+.st-interessado{color:var(--info);background:var(--info-soft)}
+.st-orcamento{color:var(--warn);background:var(--warn-soft)}
+.st-fechado{color:var(--brand);background:var(--brand-soft)}
+.st-no_ar{color:var(--ok);background:var(--ok-soft)}
+.st-perdido{color:var(--ink3);background:var(--raised)}
+.pg-pago{color:var(--ok);background:var(--ok-soft)}
+.pg-aberto{color:var(--ink2);background:var(--raised)}
+.pg-atrasado{color:var(--late);background:var(--late-soft)}
+.pg-pendente{color:var(--ink2);background:var(--raised)}
+.legenda{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--ink3)}
+.legenda span{display:inline-flex;align-items:center;gap:6px}
+.legenda i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.graf-col.grupo{gap:3px;padding:0 10px}
+.graf-col.grupo .barra{flex:0 1 26px;opacity:1}
+.graf-col.grupo .barra.b2{background:#A8A29E}
+.graf-col.grupo:hover .barra{filter:brightness(1.15)}
+.cab-pagina{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.abas-pag{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px}
+.abas-pag button{background:none;border:0;color:var(--ink3);padding:8px 14px;border-radius:9px;font-weight:600;cursor:pointer;min-height:38px;font-size:14px}
+.abas-pag button.ativo{background:var(--raised);color:var(--ink)}
+.n.pos{color:var(--ok)} .n.neg{color:var(--late)}
+.cat-linha{display:grid;grid-template-columns:minmax(0,150px) 1fr auto;gap:12px;align-items:center;font-size:13px;padding:6px 0}
+.cat-linha .nome{color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cat-linha b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.check-linha{flex-direction:row;align-items:center;gap:10px;font-size:14px;color:var(--ink)}
+.check-linha input{width:20px;height:20px;min-height:0;accent-color:var(--brand)}
+.confirmar p{margin:0;color:var(--ink2);font-size:14px;line-height:1.6}
+.pg-sinal{color:var(--warn);background:var(--warn-soft)}
+.secao-fin{margin-top:16px}
+
+/* ferramentas e tabela */
+.ferramentas{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.campo-busca{flex:1 1 260px;position:relative}
+.campo-busca svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ink3)}
+.campo-busca input{padding-left:38px}
+.ferramentas select{width:auto;flex:0 1 190px}
+.tabela-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:.06em;padding:12px 20px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:14px 20px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:rgba(255,255,255,.02)}
+tbody tr:last-child td{border-bottom:0}
+td .t1{max-width:240px}
+.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cards-mob{display:none}
+@media(max-width:899px){
+  .tabela-wrap.resp{display:none}
+  .cards-mob{display:flex;flex-direction:column}
+  .card-mob{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);background:none;border-left:0;border-right:0;border-top:0;color:inherit;text-align:left;width:100%;cursor:pointer}
+  .card-mob:last-child{border-bottom:0}
+  .card-mob .tx{flex:1;min-width:0}
+  .ferramentas{padding:12px}
+  .ferramentas select{flex:1 1 140px}
+}
+.rodape-tab{padding:12px 20px;font-size:13px;color:var(--ink3);border-top:1px solid var(--line)}
+
+/* kanban */
+.kanban{display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;align-items:flex-start;min-height:60vh}
+.coluna{flex:0 0 280px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;max-height:calc(100vh - 170px)}
+.coluna.sobre{border-color:var(--brand);background:#221C17}
+.coluna-h{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 14px 10px}
+.coluna-h .qtd{font-size:12px;color:var(--ink3)}
+.coluna-soma{padding:0 14px 10px;font-size:12px;color:var(--ink3)}
+.coluna-b{display:flex;flex-direction:column;gap:10px;padding:0 10px 12px;overflow-y:auto;min-height:60px}
+.k-card{background:var(--raised);border:1px solid transparent;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;cursor:grab}
+.k-card:hover{border-color:var(--muted)}
+.k-card.arrastando{opacity:.4}
+.k-card .t1{font-size:14px}
+.k-meta{display:flex;flex-wrap:wrap;gap:6px;font-size:12px;color:var(--ink3)}
+.k-meta span{background:var(--surface);border-radius:6px;padding:2px 8px}
+.k-acao{font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px}
+.k-acao.late{color:var(--late)} .k-acao.hoje{color:var(--warn)}
+.k-card select{font-size:13px;min-height:34px;padding:6px 8px}
+@media(min-width:900px){.k-card select{display:none}}
+
+/* financeiro */
+.mes-nav{display:flex;align-items:center;gap:10px}
+.mes-nav strong{font-size:15px;min-width:150px;text-align:center}
+.pago-btn{border:1px solid var(--muted);background:none;color:var(--ink);border-radius:8px;padding:7px 12px;font-weight:600;cursor:pointer;min-height:36px;font-size:13px;white-space:nowrap}
+.pago-btn:hover{border-color:var(--ok);color:var(--ok)}
+.pago-btn.desfazer{color:var(--ink3);border-color:transparent}
+
+/* tarefas */
+.grupo-tarefa{margin-bottom:16px}
+.tarefa{display:flex;align-items:center;gap:14px;padding:14px 20px;border-top:1px solid var(--line)}
+.tarefa:first-of-type{border-top:0}
+.tarefa .tx{flex:1;min-width:0;cursor:pointer}
+.check{width:26px;height:26px;border-radius:8px;border:2px solid var(--muted);background:none;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:transparent}
+.check:hover{border-color:var(--ok);color:var(--ok)}
+
+/* ---------- gaveta e modal ---------- */
+.fundo{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:60;display:flex;justify-content:flex-end}
+.gaveta{background:var(--surface);border-left:1px solid var(--line);width:100%;max-width:520px;height:100%;overflow-y:auto;display:flex;flex-direction:column;animation:entra .18s ease-out}
+@keyframes entra{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.gaveta-h{padding:20px 22px 0;display:flex;flex-direction:column;gap:14px;position:sticky;top:0;background:var(--surface);z-index:2}
+.gaveta-top{display:flex;align-items:flex-start;gap:12px}
+.gaveta-top h2{margin:0;font-size:21px;letter-spacing:-.4px;flex:1;min-width:0;word-break:break-word}
+.abas-int{display:flex;gap:4px;border-bottom:1px solid var(--line)}
+.abas-int button{background:none;border:0;border-bottom:2px solid transparent;color:var(--ink3);padding:10px 12px;font-weight:600;cursor:pointer;margin-bottom:-1px;min-height:44px}
+.abas-int button.ativo{color:var(--ink);border-bottom-color:var(--brand)}
+.gaveta-b{padding:20px 22px 40px;display:flex;flex-direction:column;gap:18px}
+.det-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.det-grid div{background:var(--surface);padding:12px 14px}
+.det-grid small{display:block;font-size:12px;color:var(--ink3);margin-bottom:3px}
+.det-grid b{font-size:14px;font-weight:600;word-break:break-word}
+.det-grid .full{grid-column:1/-1}
+.caixa-acao{background:var(--raised);border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px}
+.caixa-acao .tx{flex:1;min-width:0}
+.timeline{display:flex;flex-direction:column}
+.tl-item{display:flex;gap:12px;padding-bottom:16px;position:relative}
+.tl-item::before{content:"";position:absolute;left:5px;top:14px;bottom:0;width:2px;background:var(--line)}
+.tl-item:last-child::before{display:none}
+.tl-ponto{width:12px;height:12px;border-radius:3px;background:var(--muted);margin-top:4px;flex-shrink:0}
+.tl-item.etapa .tl-ponto{background:var(--brand)}
+.tl-item small{display:block;color:var(--ink3);font-size:12px}
+.tl-item p{margin:2px 0 0;font-size:14px;line-height:1.5;white-space:pre-wrap;word-break:break-word}
+.nota-add{display:flex;gap:8px}
+.nota-add textarea{min-height:44px;height:44px}
+
+.fundo.centro{justify-content:center;align-items:center;padding:20px}
+.modal{background:var(--surface);border:1px solid var(--line);border-radius:18px;width:100%;max-width:680px;max-height:92vh;overflow-y:auto;animation:sobe .18s ease-out}
+@keyframes sobe{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:600px){.fundo.centro{padding:0;align-items:flex-end}.modal{border-radius:18px 18px 0 0;max-height:94vh}}
+.modal-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:2}
+.modal-h h2{margin:0;font-size:18px}
+.modal-b{padding:20px 22px}
+.modal-f{display:flex;justify-content:flex-end;gap:10px;padding:14px 22px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line);position:sticky;bottom:0;background:var(--surface)}
+.form-secao{margin-bottom:22px}
+.form-secao h3{margin:0 0 12px;font-size:12px;letter-spacing:.15em;color:var(--ink3);font-weight:600}
+.campos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.campos .full{grid-column:1/-1}
+@media(max-width:520px){.campos{grid-template-columns:1fr}}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink2);font-weight:500}
+input,select,textarea{background:var(--bg);border:1px solid var(--muted);color:var(--ink);border-radius:10px;padding:10px 12px;min-height:42px;width:100%}
+textarea{min-height:84px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:0;border-color:transparent}
+::placeholder{color:#78716C}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--surface);font-weight:600;padding:12px 18px;border-radius:12px;z-index:80;font-size:14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+@media(max-width:899px){.toast{bottom:96px}}
+
+/* ---- orçamentos ---- */
+.orc-lista{display:flex;flex-direction:column;gap:10px}
+.orc-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;transition:border-color .15s}
+.orc-card:hover{border-color:var(--brand)}
+.orc-card-info{display:flex;flex-direction:column;gap:4px}
+.orc-card-info strong{font-size:15px;font-weight:600}
+.orc-card-info span{font-size:13px;color:var(--ink3)}
+.orc-card-valor{font-size:17px;font-weight:700;color:var(--brand);white-space:nowrap}
+.orc-card-acoes{display:flex;gap:6px}
+.orc-status{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
+.orc-s-rascunho{background:var(--muted);color:var(--ink2)}
+.orc-s-enviado{background:var(--warn-soft);color:var(--warn)}
+.orc-s-aprovado{background:var(--ok-soft);color:var(--ok)}
+.orc-s-perdido{background:var(--late-soft);color:var(--late)}
+
+/* editor de orçamento */
+.orc-editor{display:flex;flex-direction:column;gap:20px;max-width:860px}
+.orc-editor-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.orc-tabela{width:100%;border-collapse:collapse;background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.orc-tabela th{background:var(--raised);font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--ink3);padding:10px 14px;text-align:left}
+.orc-tabela td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:middle;font-size:14px}
+.orc-tabela td input{background:transparent;border:none;color:var(--ink);padding:4px 0;min-height:unset;border-radius:0;font-size:14px}
+.orc-tabela td input:focus{outline:1px solid var(--brand);border-radius:4px;padding:4px 6px}
+.orc-tabela .td-val{width:120px}
+.orc-tabela .td-rem{width:40px;text-align:center}
+.orc-add-item{background:none;border:1px dashed var(--line);border-radius:10px;width:100%;padding:11px;color:var(--ink3);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;transition:border-color .15s,color .15s}
+.orc-add-item:hover{border-color:var(--brand);color:var(--brand)}
+.orc-total-row{background:var(--raised);font-weight:700}
+.orc-acoes-editor{display:flex;gap:10px;flex-wrap:wrap}
+
+/* folha A4 de impressão */
+.orc-preview{background:#fff;color:#111;border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.35);font-family:'Poppins',sans-serif}
+.orc-folha{padding:48px 52px;min-height:600px;display:flex;flex-direction:column}
+.orc-cab{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:36px;border-bottom:3px solid #F97316;padding-bottom:24px}
+.orc-logo-bloco{display:flex;align-items:center;gap:14px}
+.orc-logo-circ{width:52px;height:52px;border-radius:50%;background:#F97316;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:900;font-size:36px;color:#fff;position:relative;flex-shrink:0}
+.orc-logo-circ::after{content:'';position:absolute;top:9px;right:7px;width:11px;height:11px;border-radius:2px;background:#fff;opacity:.25}
+.orc-marca-txt{display:flex;flex-direction:column;gap:2px}
+.orc-marca-txt strong{font-size:22px;font-weight:700;letter-spacing:-1px;line-height:1;color:#111}
+.orc-marca-txt strong span{color:#F97316}
+.orc-marca-txt small{font-size:9px;letter-spacing:.35em;color:#78716C}
+.orc-cab-info{text-align:right;font-size:13px;color:#44403C}
+.orc-cab-info strong{display:block;font-size:17px;font-weight:700;color:#111;margin-bottom:4px}
+.orc-sec-title{font-size:11px;font-weight:700;letter-spacing:.08em;color:#78716C;text-transform:uppercase;margin:0 0 10px}
+.orc-destinatario{background:#f5f5f4;border-radius:10px;padding:14px 18px;margin-bottom:24px}
+.orc-destinatario p{margin:4px 0;font-size:14px;color:#1C1917}
+.orc-destinatario p strong{color:#111}
+.orc-items-tabela{width:100%;border-collapse:collapse;margin-bottom:16px}
+.orc-items-tabela th{font-size:11px;font-weight:700;letter-spacing:.05em;color:#78716C;text-align:left;border-bottom:2px solid #E7E5E4;padding:8px 0}
+.orc-items-tabela th:last-child,.orc-items-tabela td:last-child{text-align:right}
+.orc-items-tabela td{padding:10px 0;font-size:14px;border-bottom:1px solid #F5F5F4;color:#1C1917;vertical-align:top}
+.orc-items-tabela .td-desc{max-width:340px}
+.orc-total-bloco{display:flex;justify-content:flex-end;margin-bottom:28px}
+.orc-total-box{background:#1C1917;color:#fff;border-radius:12px;padding:16px 24px;min-width:200px;text-align:right}
+.orc-total-box .label{font-size:11px;letter-spacing:.06em;color:#A8A29E;text-transform:uppercase}
+.orc-total-box .valor{font-size:26px;font-weight:700;color:#F97316;margin-top:4px}
+.orc-obs{background:#FFF7ED;border-left:4px solid #F97316;border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:28px;font-size:13px;color:#44403C;line-height:1.6}
+.orc-rodape{margin-top:auto;padding-top:28px;border-top:1px solid #E7E5E4;display:flex;justify-content:space-between;align-items:flex-end;font-size:12px;color:#78716C}
+.orc-assinatura{text-align:center}
+.orc-assinatura .linha{width:200px;border-top:1.5px solid #1C1917;margin:0 auto 8px}
+.orc-assinatura p{margin:0;font-size:13px;font-weight:600;color:#1C1917}
+.orc-assinatura small{font-size:11px;color:#78716C}
+.orc-validade{font-size:12px;color:#78716C;line-height:1.6}
+
+@media print{
+  body > *:not(#orc-print-frame){display:none !important}
+  #orc-print-frame{display:block !important;position:fixed;inset:0;width:100vw;height:100vh;border:none;z-index:9999}
+}
 </style>
 </head>
 <body>
-<div style="background: #1C1917; color: #FFFFFF; font-family: 'Poppins', system-ui, sans-serif; width: 100%; min-height: 100vh; overflow-x: hidden">
 
-<!-- TOPO -->
-<header style="position: sticky; top: 0; z-index: 10; background: #1C1917; border-bottom: 1px solid #292524">
-<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#inicio" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #FFFFFF" aria-label="Pixel Up — início">
-<div style="position: relative; width: 44px; height: 44px; border-radius: 50%; background: #F97316; display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; flex-shrink: 0">
-<div style="font-size: 32px; font-weight: 900; line-height: 1; color: #FFFFFF; margin-top: -2px">P</div>
-<div style="position: absolute; top: 9px; right: 7px; width: 9px; height: 9px; border-radius: 2px; background: #1C1917; display: flex; align-items: center; justify-content: center">
-<svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg>
-</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 26px; font-weight: 700; letter-spacing: -1px; line-height: 1">p<span style="position: relative; display: inline-block">ı<span style="position: absolute; left: 50%; top: -4px; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 1px; background: #F97316"></span><span style="position: absolute; left: 50%; top: 4px; width: 3px; height: 3px; margin-left: -1.5px; border-radius: 1px; background: #F97316; opacity: 0.35"></span></span>xel<span style="color: #F97316">up</span></div>
-<div style="font-size: 9px; letter-spacing: 0.4em; color: #D6D3D1; line-height: 1; white-space: nowrap">AGÊNCIA DIGITAL</div>
-</div>
-</a>
-<nav aria-label="Menu principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px">
-<a class="nav-link" href="#servicos" style="text-decoration: none; color: #D6D3D1">Serviços</a>
-<a class="nav-link" href="#ideias" style="text-decoration: none; color: #D6D3D1">Ideias</a>
-<a class="nav-link" href="#como-funciona" style="text-decoration: none; color: #D6D3D1">Como funciona</a>
-<a class="nav-link" href="#duvidas" style="text-decoration: none; color: #D6D3D1">Dúvidas</a>
-<a class="cta-topo" href="https://wa.me/5588998687855?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pixel%20Up%20e%20tenho%20interesse%20em%20contratar%20os%20servi%C3%A7os%20da%20ag%C3%AAncia.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" style="white-space: nowrap; text-decoration: none; background: #F97316; color: #1C1917; font-weight: 700; padding: 12px 22px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center"><span class="txt-longo">Peça seu orçamento</span><span class="txt-curto">Orçamento</span></a>
-</nav>
-</div>
-</header>
+<!-- ======================== CONFIGURAÇÃO ========================
+  Cole aqui os dados do seu projeto Firebase (Configurações do projeto > Seus apps > Web).
+  Enquanto ficar vazio, o painel roda em MODO DEMONSTRAÇÃO, salvando só neste navegador.
+================================================================= -->
+<script>
+window.FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBXPYqMgoHKb-ZZRzuTDSGCTG-1CrwnUEo",
+  authDomain: "painel-pixelup.firebaseapp.com",
+  projectId: "painel-pixelup",
+  storageBucket: "painel-pixelup.firebasestorage.app",
+  messagingSenderId: "971110335250",
+  appId: "1:971110335250:web:7ac969d22dd042af65a9cb"
+};
+</script>
 
-<!-- HERO -->
-<section id="inicio" class="hero" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 56px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 28px">
-<div style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; border: 1px solid #44403C; border-radius: 999px; padding: 8px 16px; font-size: 14px; color: #D6D3D1">
-<span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>
-Sites · Landing Pages · Sistemas Web
-</div>
-<h1 style="margin: 0; font-size: clamp(42px, 6vw, 76px); line-height: 1.04; letter-spacing: -2px; font-weight: 700">Seu negócio no <span style="color: #F97316">topo</span> da internet.</h1>
-<p style="margin: 0; font-size: 19px; line-height: 30px; color: #D6D3D1; max-width: 520px">Criamos sites, landing pages e sistemas sob medida para empresas que querem ser encontradas, vender mais e organizar o dia a dia.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 14px">
-<a href="https://wa.me/5588998687855?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pixel%20Up%20e%20tenho%20interesse%20em%20contratar%20os%20servi%C3%A7os%20da%20ag%C3%AAncia.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" style="text-decoration: none; background: #F97316; color: #1C1917; font-weight: 700; font-size: 17px; padding: 16px 30px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px">Peça seu orçamento
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<a href="#ideias" style="text-decoration: none; color: #FFFFFF; font-weight: 700; font-size: 17px; padding: 16px 30px; border-radius: 999px; border: 1px solid #44403C; display: inline-flex; align-items: center">O que dá pra fazer</a>
-</div>
-<div style="font-size: 14px; color: #D6D3D1">Ipaumirim-CE · Atendimento para todo o Brasil</div>
-</div>
-
-<!-- escada de pixels -->
-<div class="escada" style="background: #292524; border-radius: 18px; padding: 48px 40px 40px; display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; align-items: flex-end; justify-content: center; gap: 10px; height: 300px" aria-hidden="true">
-<div style="display: flex; flex-direction: column; gap: 10px"><div style="width: 50px; height: 50px; border-radius: 6px; background: #44403C"></div></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><div style="width: 50px; height: 50px; border-radius: 6px; background: #44403C"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><div style="width: 50px; height: 50px; border-radius: 6px; background: #44403C"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><div style="width: 50px; height: 50px; border-radius: 6px; background: #44403C"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div></div>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<div style="width: 50px; height: 50px; border-radius: 6px; background: #F97316; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"></path></svg></div>
-<div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div><div style="width: 50px; height: 50px; border-radius: 6px; background: #1C1917"></div>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; border-top: 1px solid #44403C; padding-top: 24px">
-<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-weight: 700; font-size: 16px">Sob medida</div><div style="font-size: 13px; color: #D6D3D1; line-height: 18px">Feito para o seu negócio</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-weight: 700; font-size: 16px">No celular</div><div style="font-size: 13px; color: #D6D3D1; line-height: 18px">Perfeito em qualquer tela</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-weight: 700; font-size: 16px">Com suporte</div><div style="font-size: 13px; color: #D6D3D1; line-height: 18px">A gente cuida depois</div></div>
-</div>
-</div>
+<!-- ======================== LOGIN ======================== -->
+<section id="login" class="hidden">
+  <div class="login-arte">
+    <div class="marca"><div class="selo" aria-hidden="true"><b>P</b><i></i></div><div class="txt"><div class="wordmark">pixel<span>up</span></div><small>AGÊNCIA DIGITAL</small></div></div>
+    <h2>Seus clientes no <span>topo</span>, tudo num só lugar.</h2>
+    <div class="escada" aria-hidden="true">
+      <div><span class="topo"></span></div>
+      <div><span class="topo"></span><span></span></div>
+      <div><span class="topo"></span><span></span><span></span></div>
+      <div><span class="up"></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="login-form">
+    <form class="login-card" id="form-login">
+      <div class="marca"><div class="selo" aria-hidden="true"><b>P</b><i></i></div><div class="txt"><div class="wordmark">pixel<span>up</span></div><small>PAINEL DA AGÊNCIA</small></div></div>
+      <h1>Entrar no painel</h1>
+      <p>Acesso restrito à equipe da Pixel Up.</p>
+      <label>E-mail<input type="email" id="login-email" autocomplete="username" required></label>
+      <label>Senha<input type="password" id="login-senha" autocomplete="current-password" required></label>
+      <div class="erro" id="login-erro" role="alert"></div>
+      <button class="btn btn-brand" type="submit" style="min-height:46px">Entrar</button>
+    </form>
+  </div>
 </section>
 
-<!-- SERVIÇOS -->
-<section id="servicos" style="background: #FFFFFF; color: #1C1917">
-<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
-<div style="font-size: 14px; letter-spacing: 0.3em; color: #57534E">O QUE FAZEMOS</div>
-<h2 style="margin: 0; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 700">Soluções digitais para cada <span style="color: #EA580C">etapa</span> do seu negócio.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 28px; color: #57534E">Existem três formas principais de levar sua empresa para a internet. Cada uma resolve um problema diferente, e a gente ajuda você a escolher a que faz mais sentido agora.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px">
+<!-- ======================== SISTEMA ======================== -->
+<div id="app" class="layout hidden">
+  <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+    <div class="marca"><div class="selo" aria-hidden="true"><b>P</b><i></i></div><div class="txt"><div class="wordmark">pixel<span>up</span></div><small>PAINEL DA AGÊNCIA</small></div></div>
+    <nav class="menu" id="menu"></nav>
+    <div class="side-rodape">
+      <div class="conta"><div class="avatar" id="avatar">P</div><div style="min-width:0"><b id="conta-nome">Pixel Up</b><span id="conta-modo">Administrador</span></div></div>
+      <div class="menu"><button data-acao="backup"><span data-ico="download"></span>Backup dos dados</button><button data-acao="sair" id="btn-sair" class="hidden"><span data-ico="sair"></span>Sair</button></div>
+    </div>
+  </aside>
 
-<div style="background: #FFF7ED; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
-<div style="width: 52px; height: 52px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 8h18M8 21h8M12 18v3"></path></svg></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Sites institucionais</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #57534E">A vitrine da sua empresa na internet: quem você é, o que oferece, onde fica e como falar com você.</p>
-<ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 26px; color: #1C1917"><li>Várias páginas e seções</li><li>Aparece bem no Google</li><li>Botão direto para o WhatsApp</li></ul>
-<div style="border-top: 1px solid #E7E5E4; padding-top: 16px; font-size: 15px; line-height: 24px; color: #57534E"><span style="font-weight: 700; color: #1C1917">Ideal para: </span>empresas que querem passar confiança, ser encontradas no Google e mostrar tudo o que oferecem em um só lugar.</div>
-</div>
+  <div class="principal">
+    <div class="banner-demo hidden" id="banner-demo">Modo demonstração: os dados ficam salvos só neste navegador. Configure o Firebase para guardar online com senha.</div>
+    <header class="topbar">
+      <div class="topbar-in">
+        <button class="icon-btn so-mobile" data-acao="menu" aria-label="Abrir menu"><span data-ico="menu"></span></button>
+        <h1 id="titulo">Visão geral<span class="sub" id="subtitulo"></span></h1>
+        <button class="btn btn-brand so-desk" data-acao="novo" id="btn-topo"><span data-ico="mais"></span><span id="btn-topo-txt">Novo cliente</span></button>
+      </div>
+    </header>
+    <main id="conteudo"></main>
+  </div>
 
-<div style="background: #FFF7ED; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
-<div style="width: 52px; height: 52px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l7 17 2.5-7.5L21 11z"></path></svg></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Landing pages</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #57534E">Uma página direta, feita para transformar visita em cliente. Ideal para o link da bio do Instagram e para anúncios.</p>
-<ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 26px; color: #1C1917"><li>Foco em uma ação: chamar no WhatsApp</li><li>Rápida de abrir no celular</li><li>Entrega mais rápida</li></ul>
-<div style="border-top: 1px solid #E7E5E4; padding-top: 16px; font-size: 15px; line-height: 24px; color: #57534E"><span style="font-weight: 700; color: #1C1917">Ideal para: </span>quem vende pelo Instagram, faz anúncios ou quer divulgar um produto, serviço ou promoção específica.</div>
-</div>
-
-<div style="background: #FFF7ED; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
-<div style="width: 52px; height: 52px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg></div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Sistemas web</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #57534E">Sistemas de gestão feitos para a rotina da sua empresa, acessados pelo navegador do computador, tablet ou celular.</p>
-<ul style="margin: 0; padding-left: 18px; font-size: 15px; line-height: 26px; color: #1C1917"><li>Cadastro de clientes e alunos</li><li>Mensalidades e financeiro</li><li>Acesso com login para a equipe</li></ul>
-<div style="border-top: 1px solid #E7E5E4; padding-top: 16px; font-size: 15px; line-height: 24px; color: #57534E"><span style="font-weight: 700; color: #1C1917">Ideal para: </span>negócios que ainda controlam tudo no caderno ou na planilha e querem organizar clientes, pagamentos e equipe.</div>
+  <nav class="bottomnav" aria-label="Navegação">
+    <button data-pag="visao"><span data-ico="painel"></span>Início</button>
+    <button data-pag="clientes"><span data-ico="clientes"></span>Clientes</button>
+    <button data-acao="novo" aria-label="Novo cliente"><span class="mais"><span data-ico="mais"></span></span></button>
+    <button data-pag="funil"><span data-ico="funil"></span>Funil</button>
+    <button data-pag="financeiro"><span data-ico="dinheiro"></span>Financeiro</button>
+  </nav>
 </div>
 
-</div>
-</div>
-</section>
+<div id="camada"></div>
+<iframe id="orc-print-frame" style="display:none;border:none" title="Impressão do orçamento"></iframe>
 
-<!-- IDEIAS -->
-<section id="ideias" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
-<div style="font-size: 14px; letter-spacing: 0.3em; color: #D6D3D1">IDEIAS PARA O SEU NEGÓCIO</div>
-<h2 style="margin: 0; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 700">O que dá pra <span style="color: #F97316">fazer</span> com um site?</h2>
-<p style="margin: 0; font-size: 18px; line-height: 28px; color: #D6D3D1">Muito mais do que mostrar o endereço. Veja algumas ideias do que a Pixel Up pode criar para cada tipo de negócio.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
+<script type="module">
+// =================== ÍCONES ===================
+const IC = {
+  painel:'<path d="M3 13h8V3H3zM13 21h8V11h-8zM13 3v6h8V3zM3 21h8v-6H3z"/>',
+  clientes:'<circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M16 3.5a4 4 0 0 1 0 9M22 21a7 7 0 0 0-4-6.3"/>',
+  funil:'<path d="M3 4h18l-7 9v6l-4 2v-8z"/>',
+  dinheiro:'<rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 10v5M18 10v5"/>',
+  tarefas:'<path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/>',
+  mais:'<path d="M12 5v14M5 12h14"/>',
+  menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+  fechar:'<path d="M6 6l12 12M18 6L6 18"/>',
+  busca:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>',
+  download:'<path d="M12 3v12M7 10l5 5 5-5M4 21h16"/>',
+  sair:'<path d="M15 4h4v16h-4M10 16l4-4-4-4M14 12H3"/>',
+  zap:'<path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/>',
+  insta:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>',
+  editar:'<path d="M14 5l5 5-10 10H4v-5zM12 7l5 5"/>',
+  lixo:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
+  ok:'<path d="M5 12l5 5L20 7"/>',
+  esq:'<path d="M15 6l-6 6 6 6"/>',
+  dir:'<path d="M9 6l6 6-6 6"/>',
+  cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  alvo:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+  foguete:'<path d="M5 15c-1 1-2 5-2 5s4-1 5-2M14 4c3-1 6 0 6 0s1 3 0 6l-7 7-6-6zM15 9h.01"/>',
+  ar:'<path d="M2 12a10 10 0 0 1 20 0M5 12a7 7 0 0 1 14 0M8.5 12a3.5 3.5 0 0 1 7 0"/><circle cx="12" cy="16" r="1.5"/>',
+  saida:'<path d="M7 7l10 10M17 9v8H9"/>',
+  entrada:'<path d="M17 17L7 7M7 15V7h8"/>',
+  recibo:'<path d="M6 2h12v20l-3-2-3 2-3-2-3 2zM9 7h6M9 11h6M9 15h4"/>',
+  planilha:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/>',
+  recorrente:'<path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/>',
+  orc:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8"/>'
+};
+const ico = (n, s = 20) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[n] || ''}</svg>`;
+function pintarIcones(raiz = document) { raiz.querySelectorAll('[data-ico]').forEach(el => { el.outerHTML = ico(el.dataset.ico); }); }
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18M3 9v11h18V9M9 20v-6h6v6"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Lojas e comércios</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Catálogo com fotos e preços dos produtos e um botão para o cliente pedir direto no WhatsApp.</p>
-</div>
+// =================== CONSTANTES ===================
+const ETAPAS = [
+  { id: 'interessado', nome: 'Interessado' },
+  { id: 'orcamento',   nome: 'Orçamento enviado' },
+  { id: 'fechado',     nome: 'Em criação' },
+  { id: 'no_ar',       nome: 'No ar' },
+  { id: 'perdido',     nome: 'Perdido' }
+];
+const SERVICOS = ['Site institucional', 'Landing page', 'Sistema web', 'Cardápio digital', 'Outro'];
+const ORIGENS = ['Instagram', 'WhatsApp', 'Indicação', 'Site', 'Pessoalmente', 'Outro'];
+const PAGINAS = {
+  visao: { nome: 'Visão geral', ico: 'painel', grupo: 'PRINCIPAL' },
+  tarefas: { nome: 'Tarefas', ico: 'tarefas', grupo: 'PRINCIPAL' },
+  clientes: { nome: 'Clientes', ico: 'clientes', grupo: 'COMERCIAL' },
+  funil: { nome: 'Funil de vendas', ico: 'funil', grupo: 'COMERCIAL' },
+  financeiro: { nome: 'Financeiro', ico: 'dinheiro', grupo: 'FINANCEIRO' },
+  despesas: { nome: 'Despesas', ico: 'recibo', grupo: 'FINANCEIRO' },
+  orcamentos: { nome: 'Orçamentos', ico: 'orc', grupo: 'COMERCIAL' }
+};
+const CATEGORIAS = ['Ferramentas e assinaturas', 'Domínio e hospedagem', 'Internet e telefone', 'Anúncios e divulgação', 'Equipamentos', 'Transporte', 'Impostos e taxas', 'Outros'];
+const RECORRENCIAS = [
+  { id: 'mensal', nome: 'Todo mês' },
+  { id: 'anual',  nome: 'Todo ano' },
+  { id: 'unica',  nome: 'Só uma vez' }
+];
+const CHAVE_DESP = 'pixelup-painel-despesas-v1';
+const CHAVE_LOCAL = 'pixelup-painel-v1';
+const COBRANCAS = [
+  { id: 'unico',  nome: 'Pagamento único' },
+  { id: 'mensal', nome: 'Só mensalidade' },
+  { id: 'ambos',  nome: 'Projeto + mensalidade' }
+];
+const SIT_PROJ = { pendente: 'Pendente', sinal: 'Sinal pago', pago: 'Pago' };
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Clínicas e consultórios</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Apresente os profissionais, as especialidades e os convênios, com pedido de agendamento online.</p>
-</div>
+const $ = (s, el = document) => el.querySelector(s);
+const nomeEtapa = id => (ETAPAS.find(e => e.id === id) || {}).nome || id;
+const brl = n => (Number(n) || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const brlCurto = n => { n = Number(n) || 0; return n >= 1000 ? 'R$ ' + (n / 1000).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' mil' : brl(n); };
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const isoDe = d => { const x = new Date(d); x.setMinutes(x.getMinutes() - x.getTimezoneOffset()); return x.toISOString().slice(0, 10); };
+const hojeISO = () => isoDe(new Date());
+const somaDias = n => { const d = new Date(); d.setDate(d.getDate() + n); return isoDe(d); };
+const dataBR = iso => iso ? iso.split('-').reverse().join('/') : '';
+const mesChave = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+const numero = v => { if (v === '' || v == null) return 0; if (typeof v === 'number') return v; const n = parseFloat(String(v).replace(/\./g, '').replace(',', '.')); return isNaN(n) ? 0 : n; };
+const novoId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const MESES_C = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6a3 3 0 1 0 0 .1M6 18a3 3 0 1 0 0 .1M8.5 7.5L20 18M8.5 16.5L20 6"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Salões e barbearias</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Página com serviços e valores e uma agenda para o cliente escolher o horário.</p>
-</div>
+function toast(msg) {
+  document.querySelectorAll('.toast').forEach(t => t.remove());
+  const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status');
+  t.innerHTML = ico('ok', 18) + esc(msg);
+  document.body.appendChild(t); setTimeout(() => t.remove(), 2400);
+}
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h2v4H4zM18 10h2v4h-2zM6 12h12M8 8v8M16 8v8"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Academias e escolas</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Sistema de alunos com controle de mensalidades, turmas e presença, tudo num painel só.</p>
-</div>
+// =================== ARMAZENAMENTO ===================
+let clientes = [];
+let despesas = [];
+let store = null;
+const cfg = window.FIREBASE_CONFIG || {};
+const usaFirebase = !!(cfg.apiKey && cfg.projectId);
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l4 4-9 9H5v-4zM12 8l4 4"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Prestadores de serviço</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Eletricista, pedreiro, fotógrafo: mostre seus trabalhos e receba pedidos de orçamento.</p>
-</div>
+function storeLocal() {
+  const ler = k => { try { return JSON.parse(localStorage.getItem(k) || '[]'); } catch (e) { return []; } };
+  const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { toast('Não foi possível salvar neste navegador'); } };
+  const up = (lista, item) => { const i = lista.findIndex(x => x.id === item.id); if (i >= 0) lista[i] = item; else lista.push(item); };
+  return {
+    async iniciar(onChange) { clientes = ler(CHAVE_LOCAL); despesas = ler(CHAVE_DESP); this.onChange = onChange; onChange(); },
+    async salvar(c) { up(clientes, c); gravar(CHAVE_LOCAL, clientes); this.onChange(); },
+    async excluir(id) { clientes = clientes.filter(x => x.id !== id); gravar(CHAVE_LOCAL, clientes); this.onChange(); },
+    async salvarDesp(d) { up(despesas, d); gravar(CHAVE_DESP, despesas); this.onChange(); },
+    async excluirDesp(id) { despesas = despesas.filter(x => x.id !== id); gravar(CHAVE_DESP, despesas); this.onChange(); },
+    async sair() {}
+  };
+}
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM11 18h2"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Assistências técnicas</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">O cliente consulta o andamento do conserto e a loja controla as ordens de serviço.</p>
-</div>
+async function storeFirebase() {
+  const base = 'https://www.gstatic.com/firebasejs/10.12.2/';
+  const { initializeApp } = await import(base + 'firebase-app.js');
+  const auth = await import(base + 'firebase-auth.js');
+  const fs = await import(base + 'firebase-firestore.js');
+  const app = initializeApp(cfg);
+  const a = auth.getAuth(app);
+  const db = fs.getFirestore(app);
+  let parar = [];
+  const gravar = (col, item) => { const { id, ...dados } = item; return fs.setDoc(fs.doc(db, col, id), dados); };
+  return {
+    async iniciar(onChange) {
+      $('#form-login').addEventListener('submit', async ev => {
+        ev.preventDefault(); $('#login-erro').textContent = '';
+        const btn = ev.target.querySelector('button'); btn.disabled = true; btn.textContent = 'Entrando...';
+        try { await auth.signInWithEmailAndPassword(a, $('#login-email').value.trim(), $('#login-senha').value); }
+        catch (e) { $('#login-erro').textContent = 'E-mail ou senha incorretos.'; }
+        btn.disabled = false; btn.textContent = 'Entrar';
+      });
+      auth.onAuthStateChanged(a, user => {
+        parar.forEach(f => f()); parar = [];
+        if (!user) { mostrarLogin(true); return; }
+        mostrarLogin(false);
+        $('#conta-nome').textContent = user.email;
+        $('#avatar').textContent = (user.email || 'P').charAt(0).toUpperCase();
+        $('#btn-sair').classList.remove('hidden');
+        const semPermissao = () => toast('Sem permissão para ler os dados. Confira as regras do Firestore.');
+        parar.push(fs.onSnapshot(fs.collection(db, 'clientes'), snap => { clientes = snap.docs.map(d => ({ id: d.id, ...d.data() })); onChange(); }, semPermissao));
+        parar.push(fs.onSnapshot(fs.collection(db, 'despesas'), snap => { despesas = snap.docs.map(d => ({ id: d.id, ...d.data() })); onChange(); }, semPermissao));
+      });
+    },
+    salvar: c => gravar('clientes', c),
+    excluir: id => fs.deleteDoc(fs.doc(db, 'clientes', id)),
+    salvarDesp: d => gravar('despesas', d),
+    excluirDesp: id => fs.deleteDoc(fs.doc(db, 'despesas', id)),
+    async sair() { await auth.signOut(a); }
+  };
+}
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16v12H4zM4 8l2-4h12l2 4M12 8v12"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Eventos e promoções</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Página especial para um lançamento, inauguração ou evento, com inscrição ou lista de presença.</p>
-</div>
+function mostrarLogin(sim) { $('#login').classList.toggle('hidden', !sim); $('#app').classList.toggle('hidden', sim); }
 
-<div style="background: #292524; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #1C1917; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"></path></svg></div>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">Profissionais liberais</h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: #D6D3D1">Advogados, contadores, corretores: um site que apresenta você e passa credibilidade.</p>
-</div>
+// =================== ESTADO ===================
+let pagina = 'visao';
+let busca = '', filtroEtapa = 'todas', filtroServico = 'todos';
+let mesFin = new Date(); mesFin.setDate(1);
+let abertoId = null, abaGaveta = 'resumo';
+let abaFin = 'resumo', filtroCat = 'todas';
+let orcamentos = JSON.parse(localStorage.getItem('pixelup-orcamentos-v1') || '[]');
+let orcAtual = null; // orçamento aberto no editor
 
-</div>
-<div style="background: #292524; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Recursos que podem entrar no seu site</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #D6D3D1">Você escolhe o que faz sentido para o seu negócio. A gente monta.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px">
+const ativos = () => clientes.filter(c => c.status !== 'perdido');
+const comAcao = () => ativos().filter(c => c.dataAcao).sort((a, b) => a.dataAcao.localeCompare(b.dataAcao));
+const atrasadas = () => comAcao().filter(c => c.dataAcao < hojeISO());
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Botão do WhatsApp</div>
+function situacaoPagamento(c, mes) {
+  const k = mesChave(mes);
+  if (c.pagamentos && c.pagamentos[k]) return 'pago';
+  const hoje = new Date(); const mesHoje = mesChave(hoje);
+  if (k < mesHoje) return 'atrasado';
+  if (k === mesHoje && c.vencimento && hoje.getDate() > Number(c.vencimento)) return 'atrasado';
+  return 'aberto';
+}
+const NOME_PG = { pago: 'Pago', aberto: 'Em aberto', atrasado: 'Atrasado' };
+function tipoCobranca(c) {
+  if (c.cobranca) return c.cobranca;
+  if (numero(c.mensalidade) > 0) return numero(c.valor) > 0 ? 'ambos' : 'mensal';
+  return 'unico';
+}
+const temMensal = c => tipoCobranca(c) !== 'unico';
+const temProjeto = c => tipoCobranca(c) !== 'mensal';
+const nomeCobranca = c => (COBRANCAS.find(x => x.id === tipoCobranca(c)) || {}).nome;
+const sitProjeto = c => c.projetoPago || 'pendente';
+const recebidoProjeto = c => sitProjeto(c) === 'pago' ? numero(c.valor) : sitProjeto(c) === 'sinal' ? Math.min(numero(c.sinal), numero(c.valor)) : 0;
+const cobraveis = () => clientes.filter(c => temMensal(c) && numero(c.mensalidade) > 0 && (c.status === 'no_ar' || c.status === 'fechado'));
+// ---- entradas e despesas por mês
+const mesDe = iso => (iso || '').slice(0, 7);
+function entradasDoMes(k) {
+  let mensal = 0, projetos = 0;
+  clientes.forEach(c => {
+    if (c.pagamentos && c.pagamentos[k]) mensal += numero(c.mensalidade);
+    if (temProjeto(c)) {
+      const sinal = numero(c.sinal), temSinal = sinal > 0 && c.sinalEm;
+      if (temSinal && mesDe(c.sinalEm) === k && (sitProjeto(c) === 'sinal' || sitProjeto(c) === 'pago')) projetos += sinal;
+      if (sitProjeto(c) === 'pago' && mesDe(c.projetoPagoEm) === k) projetos += numero(c.valor) - (temSinal ? sinal : 0);
+    }
+  });
+  return { mensal, projetos, total: mensal + projetos };
+}
+function despesaNoMes(d, k) {
+  const ini = mesDe(d.inicio); if (!ini || ini > k) return false;
+  if (d.fim && d.fim < k) return false;
+  if (d.recorrencia === 'unica') return ini === k;
+  if (d.recorrencia === 'anual') return ini.slice(5) === k.slice(5);
+  return true;
+}
+const despesasDoMes = k => despesas.filter(d => despesaNoMes(d, k));
+function situacaoDespesa(d, k) {
+  if (d.pagamentos && d.pagamentos[k]) return 'pago';
+  const hoje = new Date(), kh = mesChave(hoje), dia = Number((d.inicio || '').slice(8, 10)) || 1;
+  if (k < kh || (k === kh && hoje.getDate() > dia)) return 'atrasado';
+  return 'aberto';
+}
+const NOME_PG_DESP = { pago: 'Paga', aberto: 'A pagar', atrasado: 'Vencida' };
+const saidasDoMes = k => despesasDoMes(k).filter(d => situacaoDespesa(d, k) === 'pago').reduce((t, d) => t + numero(d.valor), 0);
+const ultimosMeses = (n, base = new Date()) => { const r = []; for (let i = n - 1; i >= 0; i--) { const d = new Date(base); d.setDate(1); d.setMonth(d.getMonth() - i); r.push(d); } return r; };
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Catálogo de produtos</div>
+const projetosCobraveis = () => clientes.filter(c => temProjeto(c) && numero(c.valor) > 0 && (c.status === 'fechado' || c.status === 'no_ar'));
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Agendamento online</div>
+function classeData(iso) { const h = hojeISO(); if (!iso) return ''; if (iso < h) return 'late'; if (iso === h) return 'hoje'; return ''; }
+function textoData(iso) { const h = hojeISO(); if (!iso) return ''; if (iso < h) return 'Atrasada · ' + dataBR(iso); if (iso === h) return 'Hoje'; if (iso === somaDias(1)) return 'Amanhã'; return dataBR(iso); }
+const tagEtapa = s => `<span class="tag st-${esc(s)}">${esc(nomeEtapa(s))}</span>`;
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Formulário de contato</div>
+// =================== RENDER GERAL ===================
+function render() {
+  const nAtras = atrasadas().length;
+  let grupo = '';
+  $('#menu').innerHTML = Object.entries(PAGINAS).map(([id, p]) => {
+    const cab = p.grupo !== grupo ? `<div class="menu-titulo">${p.grupo}</div>` : ''; grupo = p.grupo;
+    return cab + `<button data-pag="${id}" class="${pagina === id ? 'ativo' : ''}">${ico(p.ico)}${p.nome}${id === 'tarefas' && nAtras ? `<span class="badge">${nAtras}</span>` : ''}</button>`;
+  }).join('');
+  document.querySelectorAll('.bottomnav [data-pag]').forEach(b => b.classList.toggle('ativo', b.dataset.pag === pagina || (b.dataset.pag === 'financeiro' && pagina === 'despesas')));
+  const kh = mesChave(new Date()), nVenc = despesasDoMes(kh).filter(d => situacaoDespesa(d, kh) === 'atrasado').length;
+  const subs = {
+    visao: cap(new Date().toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' })),
+    clientes: clientes.length + (clientes.length === 1 ? ' cliente cadastrado' : ' clientes cadastrados'),
+    funil: 'Arraste os cartões para mudar a etapa',
+    tarefas: nAtras ? nAtras + (nAtras === 1 ? ' tarefa atrasada' : ' tarefas atrasadas') : 'Tudo em dia',
+    financeiro: 'Entradas, saídas e resultado do mês',
+    despesas: nVenc ? nVenc + (nVenc === 1 ? ' conta vencida este mês' : ' contas vencidas este mês') : 'Contas e custos da agência',
+    orcamentos: orcamentos.length + (orcamentos.length === 1 ? ' orçamento' : ' orçamentos') + (orcAtual ? ' · editando #' + orcAtual.numero : '')
+  };
+  $('#titulo').innerHTML = esc(PAGINAS[pagina].nome) + `<span class="sub">${esc(subs[pagina] || '')}</span>`;
+  $('#btn-topo-txt').textContent = pagina === 'despesas' ? 'Nova despesa' : pagina === 'orcamentos' ? 'Novo orçamento' : 'Novo cliente';
+  const el = $('#conteudo');
+  if (pagina === 'orcamentos') { telaOrcamentos(); }
+  else { el.innerHTML = ({ visao: telaVisao, clientes: telaClientes, funil: telaFunil, tarefas: telaTarefas, financeiro: telaFinanceiro, despesas: telaDespesas })[pagina](); }
+  if (pagina === 'funil') ligarArrastar();
+  ligarGrafico();
+  if (abertoId) desenharGaveta();
+}
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Mapa e endereço</div>
+// gráfico de colunas agrupadas (entradas x despesas)
+function graficoMeses(meses, series, rotulo) {
+  const max = Math.max(1, ...series.flatMap(s => s.valores));
+  const passo = max <= 500 ? 100 : max <= 2000 ? 500 : max <= 10000 ? 1000 : 5000;
+  const topo = Math.ceil(max / passo) * passo;
+  const nomeMes = m => cap(m.toLocaleDateString('pt-BR', { month: 'long' }));
+  return `
+  ${series.length > 1 ? `<div class="legenda" style="margin-bottom:22px">${series.map(s => `<span><i style="background:${s.cor}"></i>${esc(s.nome)}</span>`).join('')}</div>` : ''}
+  <div class="grafico" role="img" aria-label="${esc(rotulo)}: ${meses.map((m, i) => MESES_C[m.getMonth()] + ' ' + series.map(s => s.nome + ' ' + brl(s.valores[i])).join(', ')).join('; ')}">
+    <div class="graf-area">
+      <div class="linha-grade" style="top:0"><span>${brlCurto(topo)}</span></div>
+      <div class="linha-grade" style="top:50%"><span>${brlCurto(topo / 2)}</span></div>
+      ${meses.map((m, i) => `<div class="graf-col grupo">${series.map((s, j) => `<div class="barra ${j ? 'b2' : ''}" style="height:${(s.valores[i] / topo) * 100}%" data-dica="${esc(nomeMes(m))} · ${esc(s.nome)}: ${esc(brl(s.valores[i]))}"></div>`).join('')}</div>`).join('')}
+    </div>
+    <div class="graf-rot">${meses.map(m => `<span>${MESES_C[m.getMonth()]}</span>`).join('')}</div>
+  </div>`;
+}
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Galeria de fotos</div>
+// ---------- VISÃO GERAL ----------
+function telaVisao() {
+  const conta = s => clientes.filter(c => c.status === s).length;
+  const negociando = conta('interessado') + conta('orcamento');
+  const emAberto = clientes.filter(c => c.status === 'orcamento').reduce((t, c) => t + numero(c.valor), 0);
+  const cob = cobraveis();
+  const recorrente = clientes.filter(c => c.status === 'no_ar').reduce((t, c) => t + numero(c.mensalidade), 0);
+  const hoje = new Date(); hoje.setDate(1);
+  const recebidoMes = cob.filter(c => situacaoPagamento(c, hoje) === 'pago').reduce((t, c) => t + numero(c.mensalidade), 0);
+  const previstoMes = cob.reduce((t, c) => t + numero(c.mensalidade), 0);
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Depoimentos de clientes</div>
+  const kh = mesChave(new Date());
+  const entMes = entradasDoMes(kh).total, saiMes = saidasDoMes(kh), lucroMes = entMes - saiMes;
+  const meses = ultimosMeses(6);
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Área com login</div>
+  const funilMax = Math.max(...ETAPAS.slice(0, 4).map(e => conta(e.id)), 1);
+  const prox = comAcao().filter(c => c.dataAcao <= somaDias(7)).slice(0, 6);
+  const recentes = [...clientes].sort((a, b) => (b.criadoEm || '').localeCompare(a.criadoEm || '')).slice(0, 5);
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Painel administrativo</div>
+  const kpi = (ico_, rot, n, d) => `<div class="painel kpi"><div class="kpi-top">${rot}<span class="kpi-ico">${ico(ico_, 18)}</span></div><div class="n">${n}</div><div class="d">${d}</div></div>`;
+  return `
+  <div class="grid-kpi">
+    ${kpi('alvo', 'Em negociação', negociando, emAberto ? brl(emAberto) + ' em orçamentos' : 'Interessados e orçamentos')}
+    ${kpi('foguete', 'Em criação', conta('fechado'), 'Projetos em andamento')}
+    ${kpi('ar', 'Clientes no ar', conta('no_ar'), recorrente ? brl(recorrente) + '/mês em mensalidades' : 'Sites e sistemas publicados')}
+    ${kpi('recorrente', 'Lucro do mês', `<span class="${lucroMes < 0 ? 'neg' : ''}">${brl(lucroMes)}</span>`, 'Entrou ' + brl(entMes) + ' · saiu ' + brl(saiMes))}
+  </div>
 
-<div style="display: inline-flex; align-items: center; gap: 10px; background: #1C1917; border: 1px solid #44403C; border-radius: 999px; padding: 10px 18px; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F97316"></span>Link para a bio do Instagram</div>
+  <div class="grid-2">
+    <section class="painel">
+      <div class="painel-h"><h2>Entradas e despesas</h2><button class="btn btn-sm btn-ghost" data-pag="financeiro">Financeiro</button></div>
+      <div class="painel-b">
+        ${graficoMeses(meses, [
+          { nome: 'Entradas', cor: '#F97316', valores: meses.map(m => entradasDoMes(mesChave(m)).total) },
+          { nome: 'Despesas', cor: '#A8A29E', valores: meses.map(m => saidasDoMes(mesChave(m))) }
+        ], 'Entradas e despesas dos últimos 6 meses')}
+      </div>
+    </section>
+    <section class="painel">
+      <div class="painel-h"><h2>Funil de vendas</h2><span>${ativos().length} ativos</span></div>
+      <div class="painel-b">
+        <div class="funil-barras">
+          ${ETAPAS.slice(0, 4).map(e => `<div class="fb-linha"><span class="nome">${e.nome}</span><div class="fb-trilho"><div style="width:${(conta(e.id) / funilMax) * 100}%"></div></div><b>${conta(e.id)}</b></div>`).join('')}
+        </div>
+        <p style="margin:18px 0 0;font-size:13px;color:var(--ink3)">${conta('perdido')} ${conta('perdido') === 1 ? 'negociação perdida' : 'negociações perdidas'} · <button class="btn btn-sm btn-ghost" data-pag="funil" style="margin-left:6px">Abrir funil</button></p>
+      </div>
+    </section>
+  </div>
 
-</div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid #44403C; border-radius: 18px; padding: 28px 32px">
-<p style="margin: 0; font-size: 18px; line-height: 28px; max-width: 640px">Tem uma ideia diferente? Conte pra gente. Se dá pra fazer na internet, a gente encontra um jeito.</p>
-<a href="https://wa.me/5588998687855?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pixel%20Up%20e%20tenho%20interesse%20em%20contratar%20os%20servi%C3%A7os%20da%20ag%C3%AAncia.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" style="text-decoration: none; background: #F97316; color: #1C1917; font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 999px; display: inline-flex; align-items: center">Contar minha ideia</a>
-</div>
-</section>
+  <div class="grid-2">
+    <section class="painel">
+      <div class="painel-h"><h2>Próximas tarefas</h2><button class="btn btn-sm btn-ghost" data-pag="tarefas">Ver todas</button></div>
+      <div class="painel-b"><div class="lista-acoes">
+        ${prox.length ? prox.map(itemAcao).join('') : '<div class="vazio">Nenhuma tarefa para os próximos 7 dias.</div>'}
+      </div></div>
+    </section>
+    <section class="painel">
+      <div class="painel-h"><h2>Últimos cadastros</h2><button class="btn btn-sm btn-ghost" data-pag="clientes">Ver clientes</button></div>
+      <div class="painel-b"><div class="lista-acoes">
+        ${recentes.length ? recentes.map(c => `<button class="acao-item" data-abrir="${esc(c.id)}"><div class="avatar">${esc((c.empresa || '?').charAt(0).toUpperCase())}</div><div class="tx"><div class="t1">${esc(c.empresa)}</div><div class="t2">${esc(c.servico || '')}${c.cidade ? ' · ' + esc(c.cidade) : ''}</div></div>${tagEtapa(c.status)}</button>`).join('')
+          : '<div class="vazio">Nenhum cliente ainda.<br><button class="btn btn-brand btn-sm" data-acao="novo" style="margin-top:12px">Cadastrar o primeiro</button></div>'}
+      </div></div>
+    </section>
+  </div>`;
+}
 
-<!-- COMO FUNCIONA -->
-<section id="como-funciona" style="background: #292524">
-<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
-<div style="font-size: 14px; letter-spacing: 0.3em; color: #D6D3D1">COMO FUNCIONA</div>
-<h2 style="margin: 0; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 700">Do primeiro contato ao seu site <span style="color: #F97316">no ar</span>.</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 20px">
+function itemAcao(c) {
+  const cl = classeData(c.dataAcao);
+  const d = new Date(c.dataAcao + 'T12:00:00');
+  return `<button class="acao-item" data-abrir="${esc(c.id)}">
+    <div class="acao-data ${cl}"><b>${d.getDate()}</b><small>${MESES_C[d.getMonth()]}</small></div>
+    <div class="tx"><div class="t1">${esc(c.proximaAcao || 'Acompanhar cliente')}</div><div class="t2">${esc(c.empresa)} · ${esc(textoData(c.dataAcao))}</div></div>
+  </button>`;
+}
 
-<div style="background: #1C1917; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: flex-end; gap: 4px; height: 40px" aria-hidden="true">
-<div style="width: 12px; height: 12px; border-radius: 3px; background: #F97316"></div>
-</div>
-<div style="font-size: 14px; color: #D6D3D1; letter-spacing: 0.2em">ETAPA 01</div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Conversa</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #D6D3D1">Você conta sobre o seu negócio e o que precisa. Entendemos o seu cliente e o seu objetivo.</p>
-</div>
+function ligarGrafico() {
+  document.querySelectorAll('.grafico').forEach(g => {
+    let dica = null;
+    g.querySelectorAll('.barra[data-dica]').forEach(b => {
+      b.addEventListener('mouseenter', () => {
+        dica = document.createElement('div'); dica.className = 'dica'; dica.textContent = b.dataset.dica; g.appendChild(dica);
+        const r = b.getBoundingClientRect(), rg = g.getBoundingClientRect();
+        dica.style.left = (r.left - rg.left + r.width / 2) + 'px'; dica.style.top = (r.top - rg.top) + 'px';
+      });
+      b.addEventListener('mouseleave', () => { if (dica) dica.remove(); dica = null; });
+    });
+  });
+}
 
-<div style="background: #1C1917; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: flex-end; gap: 4px; height: 40px" aria-hidden="true">
-<div style="width: 12px; height: 12px; border-radius: 3px; background: #44403C"></div><div style="width: 12px; height: 21px; border-radius: 3px; background: #F97316"></div>
-</div>
-<div style="font-size: 14px; color: #D6D3D1; letter-spacing: 0.2em">ETAPA 02</div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Proposta</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #D6D3D1">Enviamos uma proposta clara, com o que será feito, o prazo e o valor.</p>
-</div>
+// ---------- CLIENTES ----------
+function telaClientes() {
+  const t = busca.toLowerCase();
+  const lista = clientes
+    .filter(c => filtroEtapa === 'todas' || c.status === filtroEtapa)
+    .filter(c => filtroServico === 'todos' || c.servico === filtroServico)
+    .filter(c => !t || [c.empresa, c.responsavel, c.cidade, c.whatsapp, c.instagram, c.servico].join(' ').toLowerCase().includes(t))
+    .sort((a, b) => (b.atualizadoEm || '').localeCompare(a.atualizadoEm || ''));
+  return `
+  <section class="painel">
+    <div class="ferramentas">
+      <div class="campo-busca">${ico('busca', 18)}<input id="busca" type="search" placeholder="Buscar empresa, contato, cidade..." aria-label="Buscar clientes" value="${esc(busca)}"></div>
+      <select id="f-etapa" aria-label="Filtrar por etapa"><option value="todas">Todas as etapas</option>${ETAPAS.map(e => `<option value="${e.id}" ${filtroEtapa === e.id ? 'selected' : ''}>${e.nome}</option>`).join('')}</select>
+      <select id="f-servico" aria-label="Filtrar por serviço"><option value="todos">Todos os serviços</option>${SERVICOS.map(s => `<option ${filtroServico === s ? 'selected' : ''}>${s}</option>`).join('')}</select>
+    </div>
+    ${lista.length ? `
+    <div class="tabela-wrap resp"><table>
+      <thead><tr><th>Empresa</th><th>Serviço</th><th>Etapa</th><th class="num">Projeto</th><th>Cobrança</th><th>Próxima tarefa</th></tr></thead>
+      <tbody>${lista.map(c => `<tr data-abrir="${esc(c.id)}" tabindex="0">
+        <td><div class="t1">${esc(c.empresa)}</div><div class="t2">${esc([c.responsavel, c.cidade].filter(Boolean).join(' · ') || '—')}</div></td>
+        <td>${esc(c.servico || '—')}</td>
+        <td>${tagEtapa(c.status)}</td>
+        <td class="num">${numero(c.valor) ? brl(c.valor) : '—'}</td>
+        <td>${temMensal(c) && numero(c.mensalidade) ? `<div class="t1" style="font-weight:500">${brl(c.mensalidade)}/mês</div>` : ''}<div class="t2">${esc(nomeCobranca(c))}</div></td>
+        <td>${c.dataAcao ? `<div class="t1" style="font-weight:500;max-width:200px">${esc(c.proximaAcao || 'Acompanhar')}</div><div class="t2 ${classeData(c.dataAcao) === 'late' ? '' : ''}" style="${classeData(c.dataAcao) === 'late' ? 'color:var(--late)' : classeData(c.dataAcao) === 'hoje' ? 'color:var(--warn)' : ''}">${esc(textoData(c.dataAcao))}</div>` : '<span class="t2">—</span>'}</td>
+      </tr>`).join('')}</tbody>
+    </table></div>
+    <div class="cards-mob">${lista.map(c => `<button class="card-mob" data-abrir="${esc(c.id)}"><div class="avatar">${esc((c.empresa || '?').charAt(0).toUpperCase())}</div><div class="tx"><div class="t1">${esc(c.empresa)}</div><div class="t2">${esc([c.servico, c.cidade].filter(Boolean).join(' · ') || '—')}</div></div>${tagEtapa(c.status)}</button>`).join('')}</div>
+    <div class="rodape-tab">${lista.length} de ${clientes.length} ${clientes.length === 1 ? 'cliente' : 'clientes'}</div>`
+    : `<div class="vazio">${clientes.length ? 'Nenhum cliente encontrado com esses filtros.' : 'Nenhum cliente cadastrado ainda.'}<br><button class="btn btn-brand btn-sm" data-acao="novo" style="margin-top:12px">Novo cliente</button></div>`}
+  </section>`;
+}
 
-<div style="background: #1C1917; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: flex-end; gap: 4px; height: 40px" aria-hidden="true">
-<div style="width: 12px; height: 12px; border-radius: 3px; background: #44403C"></div><div style="width: 12px; height: 21px; border-radius: 3px; background: #44403C"></div><div style="width: 12px; height: 30px; border-radius: 3px; background: #F97316"></div>
-</div>
-<div style="font-size: 14px; color: #D6D3D1; letter-spacing: 0.2em">ETAPA 03</div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">Criação</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #D6D3D1">Desenvolvemos o projeto e você acompanha, pede ajustes e aprova cada parte.</p>
-</div>
+// ---------- FUNIL ----------
+function telaFunil() {
+  return `<div class="kanban">${ETAPAS.map(e => {
+    const itens = clientes.filter(c => c.status === e.id).sort((a, b) => (b.atualizadoEm || '').localeCompare(a.atualizadoEm || ''));
+    const soma = itens.reduce((t, c) => t + numero(c.valor), 0);
+    return `<section class="coluna" data-coluna="${e.id}" aria-label="${e.nome}">
+      <div class="coluna-h">${tagEtapa(e.id)}<span class="qtd">${itens.length}</span></div>
+      <div class="coluna-soma">${soma ? brl(soma) + ' em projetos' : '&nbsp;'}</div>
+      <div class="coluna-b">
+        ${itens.map(c => `<article class="k-card" draggable="true" data-id="${esc(c.id)}">
+          <button data-abrir="${esc(c.id)}" style="all:unset;cursor:pointer;display:flex;flex-direction:column;gap:6px">
+            <span class="t1">${esc(c.empresa)}</span>
+            <span class="k-meta">${c.servico ? `<span>${esc(c.servico)}</span>` : ''}${numero(c.valor) ? `<span>${brl(c.valor)}</span>` : ''}</span>
+            ${c.dataAcao ? `<span class="k-acao ${classeData(c.dataAcao)}">${ico('cal', 14)}${esc(textoData(c.dataAcao))}</span>` : ''}
+          </button>
+          <select data-mover="${esc(c.id)}" aria-label="Mover ${esc(c.empresa)}">${ETAPAS.map(x => `<option value="${x.id}" ${x.id === c.status ? 'selected' : ''}>${x.nome}</option>`).join('')}</select>
+        </article>`).join('') || '<div class="vazio" style="padding:16px 8px">Nenhum cliente</div>'}
+      </div>
+    </section>`;
+  }).join('')}</div>`;
+}
 
-<div style="background: #1C1917; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: flex-end; gap: 4px; height: 40px" aria-hidden="true">
-<div style="width: 12px; height: 12px; border-radius: 3px; background: #44403C"></div><div style="width: 12px; height: 21px; border-radius: 3px; background: #44403C"></div><div style="width: 12px; height: 30px; border-radius: 3px; background: #44403C"></div><div style="width: 12px; height: 39px; border-radius: 3px; background: #F97316"></div>
-</div>
-<div style="font-size: 14px; color: #D6D3D1; letter-spacing: 0.2em">ETAPA 04</div>
-<h3 style="margin: 0; font-size: 22px; font-weight: 700">No ar</h3>
-<p style="margin: 0; font-size: 16px; line-height: 25px; color: #D6D3D1">Publicamos, entregamos tudo funcionando e seguimos com você no suporte.</p>
-</div>
+function ligarArrastar() {
+  let arrastado = null;
+  document.querySelectorAll('.k-card').forEach(k => {
+    k.addEventListener('dragstart', e => { arrastado = k.dataset.id; k.classList.add('arrastando'); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', arrastado); });
+    k.addEventListener('dragend', () => { k.classList.remove('arrastando'); document.querySelectorAll('.coluna').forEach(c => c.classList.remove('sobre')); });
+  });
+  document.querySelectorAll('.coluna').forEach(col => {
+    col.addEventListener('dragover', e => { e.preventDefault(); col.classList.add('sobre'); });
+    col.addEventListener('dragleave', e => { if (!col.contains(e.relatedTarget)) col.classList.remove('sobre'); });
+    col.addEventListener('drop', e => { e.preventDefault(); col.classList.remove('sobre'); const id = e.dataTransfer.getData('text/plain') || arrastado; if (id) mudarEtapa(id, col.dataset.coluna); });
+  });
+}
 
-</div>
-</div>
-</section>
+// ---------- TAREFAS ----------
+function telaTarefas() {
+  const h = hojeISO(), sete = somaDias(7);
+  const todas = comAcao();
+  const grupos = [
+    ['Atrasadas', todas.filter(c => c.dataAcao < h)],
+    ['Hoje', todas.filter(c => c.dataAcao === h)],
+    ['Próximos 7 dias', todas.filter(c => c.dataAcao > h && c.dataAcao <= sete)],
+    ['Mais pra frente', todas.filter(c => c.dataAcao > sete)]
+  ].filter(g => g[1].length);
+  const semAcao = ativos().filter(c => !c.dataAcao && c.status !== 'no_ar');
+  return (grupos.length ? grupos.map(([nome, itens]) => `
+    <section class="painel grupo-tarefa">
+      <div class="painel-h" style="padding-bottom:12px"><h2>${nome}</h2><span>${itens.length}</span></div>
+      ${itens.map(c => `<div class="tarefa" style="border-top:1px solid var(--line)">
+        <button class="check" data-concluir="${esc(c.id)}" aria-label="Concluir tarefa de ${esc(c.empresa)}">${ico('ok', 16)}</button>
+        <div class="tx" data-abrir="${esc(c.id)}"><div class="t1">${esc(c.proximaAcao || 'Acompanhar cliente')}</div><div class="t2">${esc(c.empresa)} · <span style="${c.dataAcao < h ? 'color:var(--late)' : c.dataAcao === h ? 'color:var(--warn)' : ''}">${esc(textoData(c.dataAcao))}</span></div></div>
+        ${tagEtapa(c.status)}
+      </div>`).join('')}
+    </section>`).join('') : `<section class="painel grupo-tarefa"><div class="vazio">Nenhuma tarefa marcada. Abra um cliente e defina a próxima tarefa.</div></section>`)
+  + (semAcao.length ? `<section class="painel grupo-tarefa">
+      <div class="painel-h" style="padding-bottom:12px"><h2>Clientes sem próxima tarefa</h2><span>${semAcao.length}</span></div>
+      ${semAcao.map(c => `<div class="tarefa" style="border-top:1px solid var(--line)"><div class="avatar">${esc((c.empresa || '?').charAt(0).toUpperCase())}</div><div class="tx" data-abrir="${esc(c.id)}"><div class="t1">${esc(c.empresa)}</div><div class="t2">Defina o próximo passo para não esfriar</div></div>${tagEtapa(c.status)}</div>`).join('')}
+    </section>` : '');
+}
 
-<!-- DIFERENCIAIS -->
-<section style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 56px; align-items: start">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<div style="font-size: 14px; letter-spacing: 0.3em; color: #D6D3D1">POR QUE A PIXEL UP</div>
-<h2 style="margin: 0; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 700">Uma agência perto de você, com <span style="color: #F97316">padrão</span> de empresa grande.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 28px; color: #D6D3D1">Você fala direto com quem desenvolve. Sem modelo pronto, sem complicação e sem sumir depois da entrega.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 0">
+// ---------- FINANCEIRO ----------
+const kpiBox = (ico_, rot, n, d, cls = '') => `<div class="painel kpi"><div class="kpi-top">${rot}<span class="kpi-ico">${ico(ico_, 18)}</span></div><div class="n ${cls}">${n}</div><div class="d">${d}</div></div>`;
+function navMes(extra = '') {
+  const nomeMes = cap(mesFin.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }));
+  return `<div class="mes-nav">
+      <button class="icon-btn" data-mes="-1" aria-label="Mês anterior">${ico('esq')}</button>
+      <strong>${esc(nomeMes)}</strong>
+      <button class="icon-btn" data-mes="1" aria-label="Próximo mês">${ico('dir')}</button>
+      ${extra}
+    </div>`;
+}
 
-<div style="display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid #44403C">
-<div style="width: 28px; height: 28px; border-radius: 6px; background: #F97316; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 18px; font-weight: 700">Feito sob medida</div>
-<div style="font-size: 16px; line-height: 25px; color: #D6D3D1">Nada de modelo pronto: cada projeto nasce da realidade do seu negócio.</div>
-</div>
-</div>
+function telaFinanceiro() {
+  const k = mesChave(mesFin);
+  const ent = entradasDoMes(k), sai = saidasDoMes(k), lucro = ent.total - sai;
+  const mens = cobraveis();
+  const aReceber = mens.filter(c => situacaoPagamento(c, mesFin) !== 'pago').reduce((t, c) => t + numero(c.mensalidade), 0)
+    + projetosCobraveis().reduce((t, c) => t + numero(c.valor) - recebidoProjeto(c), 0);
+  const despMes = despesasDoMes(k), aPagar = despMes.filter(d => situacaoDespesa(d, k) !== 'pago').reduce((t, d) => t + numero(d.valor), 0);
+  const meses = ultimosMeses(6, mesFin);
+  const abas = [['resumo', 'Resumo'], ['mensalidades', 'Mensalidades'], ['projetos', 'Projetos']];
+  let corpo = '';
+  if (abaFin === 'resumo') {
+    const contas = despMes.filter(d => situacaoDespesa(d, k) !== 'pago').sort((a, b) => (a.inicio || '').slice(8).localeCompare((b.inicio || '').slice(8)));
+    corpo = `
+    <div class="grid-2">
+      <section class="painel">
+        <div class="painel-h"><h2>Entradas e despesas</h2><span>6 meses até ${MESES_C[mesFin.getMonth()]}</span></div>
+        <div class="painel-b">${graficoMeses(meses, [
+          { nome: 'Entradas', cor: '#F97316', valores: meses.map(m => entradasDoMes(mesChave(m)).total) },
+          { nome: 'Despesas', cor: '#A8A29E', valores: meses.map(m => saidasDoMes(mesChave(m))) }
+        ], 'Entradas e despesas por mês')}</div>
+      </section>
+      <section class="painel">
+        <div class="painel-h"><h2>De onde veio o dinheiro</h2><span>${MESES_C[mesFin.getMonth()]}</span></div>
+        <div class="painel-b">
+          <div class="det-grid">
+            <div><small>Mensalidades</small><b>${brl(ent.mensal)}</b></div>
+            <div><small>Projetos</small><b>${brl(ent.projetos)}</b></div>
+            <div><small>Total de entradas</small><b>${brl(ent.total)}</b></div>
+            <div><small>Despesas pagas</small><b>${brl(sai)}</b></div>
+            <div class="full"><small>Resultado do mês</small><b style="color:${lucro < 0 ? 'var(--late)' : 'var(--ok)'}">${brl(lucro)}</b></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="painel">
+      <div class="painel-h" style="padding-bottom:6px"><h2>Contas a pagar</h2><button class="btn btn-sm btn-ghost" data-pag="despesas">Ver despesas</button></div>
+      <div class="painel-b"><div class="lista-acoes">
+        ${contas.length ? contas.map(d => { const s = situacaoDespesa(d, k); return `<div class="acao-item" style="cursor:default">
+          <div class="acao-data ${s === 'atrasado' ? 'late' : ''}"><b>${Number((d.inicio || '').slice(8, 10)) || 1}</b><small>${MESES_C[mesFin.getMonth()]}</small></div>
+          <div class="tx" data-desp="${esc(d.id)}" style="cursor:pointer"><div class="t1">${esc(d.descricao)}</div><div class="t2">${esc(d.categoria || '')} · ${brl(d.valor)}</div></div>
+          <button class="pago-btn" data-pagar-desp="${esc(d.id)}">Marcar paga</button></div>`; }).join('')
+          : '<div class="vazio">Nenhuma conta pendente neste mês.</div>'}
+      </div></div>
+    </section>`;
+  } else if (abaFin === 'mensalidades') {
+    corpo = telaMensalidades();
+  } else {
+    corpo = telaProjetos();
+  }
+  return `
+  <div class="cab-pagina">
+    <div class="abas-pag" role="tablist">${abas.map(([id, n]) => `<button role="tab" aria-selected="${abaFin === id}" class="${abaFin === id ? 'ativo' : ''}" data-aba-fin="${id}">${n}</button>`).join('')}</div>
+    ${navMes(`<button class="btn btn-ghost btn-sm so-desk" data-acao="exportar" style="min-height:42px">${ico('planilha', 16)}Exportar mês</button>`)}
+  </div>
+  <div class="grid-kpi">
+    ${kpiBox('entrada', 'Entradas', brl(ent.total), 'Mensalidades ' + brl(ent.mensal) + ' · projetos ' + brl(ent.projetos))}
+    ${kpiBox('saida', 'Despesas pagas', brl(sai), aPagar ? brl(aPagar) + ' ainda a pagar' : 'Nenhuma conta pendente')}
+    ${kpiBox('recorrente', 'Lucro do mês', brl(lucro), ent.total ? Math.round(lucro / ent.total * 100) + '% das entradas' : 'Entradas menos despesas', lucro < 0 ? 'neg' : lucro > 0 ? 'pos' : '')}
+    ${kpiBox('cal', 'A receber', brl(aReceber), 'Mensalidades do mês e projetos')}
+  </div>
+  ${corpo}`;
+}
 
-<div style="display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid #44403C">
-<div style="width: 28px; height: 28px; border-radius: 6px; background: #F97316; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 18px; font-weight: 700">Pensado para o celular</div>
-<div style="font-size: 16px; line-height: 25px; color: #D6D3D1">Seu cliente acessa pelo celular, então é lá que tudo precisa funcionar melhor.</div>
-</div>
-</div>
+function telaMensalidades() {
+  const lista = cobraveis().sort((a, b) => (Number(a.vencimento) || 99) - (Number(b.vencimento) || 99));
+  const sit = c => situacaoPagamento(c, mesFin);
+  const soma = f => lista.filter(f).reduce((t, c) => t + numero(c.mensalidade), 0);
+  const previsto = soma(() => true), recebido = soma(c => sit(c) === 'pago'), atrasado = soma(c => sit(c) === 'atrasado');
+  return `<section class="painel">
+    <div class="painel-h" style="padding-bottom:14px"><h2>Mensalidades</h2><span>${brl(recebido)} de ${brl(previsto)} recebido${atrasado ? ' · ' + brl(atrasado) + ' atrasado' : ''}</span></div>
+    ${lista.length ? `
+    <div class="tabela-wrap"><table>
+      <thead><tr><th>Cliente</th><th>Vencimento</th><th class="num">Valor</th><th>Situação</th><th></th></tr></thead>
+      <tbody>${lista.map(c => { const s = sit(c); return `<tr>
+        <td data-abrir="${esc(c.id)}"><div class="t1">${esc(c.empresa)}</div><div class="t2">${esc(c.servico || '')}</div></td>
+        <td data-abrir="${esc(c.id)}">${c.vencimento ? 'Dia ' + esc(c.vencimento) : '—'}</td>
+        <td class="num" data-abrir="${esc(c.id)}">${brl(c.mensalidade)}</td>
+        <td data-abrir="${esc(c.id)}"><span class="tag pg-${s}">${NOME_PG[s]}</span></td>
+        <td class="num"><button class="pago-btn ${s === 'pago' ? 'desfazer' : ''}" data-pagar="${esc(c.id)}">${s === 'pago' ? 'Desfazer' : 'Marcar pago'}</button></td>
+      </tr>`; }).join('')}</tbody>
+    </table></div>` : '<div class="vazio">Nenhum cliente com mensalidade neste mês.</div>'}
+  </section>`;
+}
 
-<div style="display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid #44403C">
-<div style="width: 28px; height: 28px; border-radius: 6px; background: #F97316; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 18px; font-weight: 700">Cliente direto no WhatsApp</div>
-<div style="font-size: 16px; line-height: 25px; color: #D6D3D1">Botões que levam a pessoa até você, prontos para fechar negócio.</div>
-</div>
-</div>
+function telaProjetos() {
+  const lista = projetosCobraveis().sort((a, b) => ({ pendente: 0, sinal: 1, pago: 2 }[sitProjeto(a)] - { pendente: 0, sinal: 1, pago: 2 }[sitProjeto(b)]));
+  const total = lista.reduce((t, c) => t + numero(c.valor), 0);
+  const recebido = lista.reduce((t, c) => t + recebidoProjeto(c), 0);
+  return `<section class="painel">
+    <div class="painel-h" style="padding-bottom:14px"><h2>Pagamentos de projetos</h2><span>${brl(total - recebido)} a receber · ${brl(recebido)} recebido</span></div>
+    ${lista.length ? `<div class="tabela-wrap"><table>
+      <thead><tr><th>Cliente</th><th>Cobrança</th><th class="num">Valor</th><th class="num">Recebido</th><th>Situação</th><th></th></tr></thead>
+      <tbody>${lista.map(c => { const s = sitProjeto(c); return `<tr>
+        <td data-abrir="${esc(c.id)}"><div class="t1">${esc(c.empresa)}</div><div class="t2">${esc(c.servico || '')}</div></td>
+        <td data-abrir="${esc(c.id)}"><span class="t2">${esc(nomeCobranca(c))}</span></td>
+        <td class="num" data-abrir="${esc(c.id)}">${brl(c.valor)}</td>
+        <td class="num" data-abrir="${esc(c.id)}">${brl(recebidoProjeto(c))}</td>
+        <td data-abrir="${esc(c.id)}"><span class="tag pg-${s}">${SIT_PROJ[s]}</span></td>
+        <td class="num"><button class="pago-btn ${s === 'pago' ? 'desfazer' : ''}" data-pagar-proj="${esc(c.id)}">${s === 'pago' ? 'Desfazer' : 'Marcar pago'}</button></td>
+      </tr>`; }).join('')}</tbody>
+    </table></div>` : '<div class="vazio">Nenhum projeto fechado com pagamento único. Eles aparecem aqui quando o cliente está Em criação ou No ar.</div>'}
+  </section>`;
+}
 
-<div style="display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid #44403C">
-<div style="width: 28px; height: 28px; border-radius: 6px; background: #F97316; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 18px; font-weight: 700">Você no controle</div>
-<div style="font-size: 16px; line-height: 25px; color: #D6D3D1">Nos sistemas, você mesmo altera preços, itens e cadastros quando quiser.</div>
-</div>
-</div>
+// ---------- DESPESAS ----------
+function telaDespesas() {
+  const k = mesChave(mesFin);
+  const doMes = despesasDoMes(k);
+  const lista = doMes.filter(d => filtroCat === 'todas' || d.categoria === filtroCat)
+    .sort((a, b) => (a.inicio || '').slice(8).localeCompare((b.inicio || '').slice(8)));
+  const total = doMes.reduce((t, d) => t + numero(d.valor), 0);
+  const pago = doMes.filter(d => situacaoDespesa(d, k) === 'pago').reduce((t, d) => t + numero(d.valor), 0);
+  const vencido = doMes.filter(d => situacaoDespesa(d, k) === 'atrasado').reduce((t, d) => t + numero(d.valor), 0);
+  const fixas = despesas.filter(d => d.recorrencia === 'mensal' && despesaNoMes(d, k)).reduce((t, d) => t + numero(d.valor), 0);
+  const porCat = CATEGORIAS.map(c => [c, doMes.filter(d => d.categoria === c).reduce((t, d) => t + numero(d.valor), 0)]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]);
+  const maxCat = Math.max(1, ...porCat.map(x => x[1]));
+  const nomeRec = id => (RECORRENCIAS.find(r => r.id === id) || {}).nome || '—';
+  return `
+  <div class="cab-pagina">
+    <select id="f-cat" aria-label="Filtrar por categoria" style="width:auto;min-width:220px"><option value="todas">Todas as categorias</option>${CATEGORIAS.map(c => `<option ${filtroCat === c ? 'selected' : ''}>${c}</option>`).join('')}</select>
+    ${navMes()}
+  </div>
+  <div class="grid-kpi">
+    ${kpiBox('recibo', 'Total do mês', brl(total), doMes.length + (doMes.length === 1 ? ' conta' : ' contas'))}
+    ${kpiBox('ok', 'Pago', brl(pago), total ? Math.round(pago / total * 100) + '% do total' : '—')}
+    ${kpiBox('cal', 'A pagar', brl(total - pago), vencido ? brl(vencido) + ' vencido' : 'Nada vencido', vencido ? 'neg' : '')}
+    ${kpiBox('recorrente', 'Custo fixo mensal', brl(fixas), 'Contas que repetem todo mês')}
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <section class="painel">
+      <div class="painel-h" style="padding-bottom:14px"><h2>Contas do mês</h2><button class="btn btn-sm btn-brand" data-acao="nova-desp">${ico('mais', 16)}Nova despesa</button></div>
+      ${lista.length ? `
+      <div class="tabela-wrap resp"><table>
+        <thead><tr><th>Descrição</th><th>Vence</th><th class="num">Valor</th><th>Situação</th><th></th></tr></thead>
+        <tbody>${lista.map(d => { const s = situacaoDespesa(d, k); return `<tr>
+          <td data-desp="${esc(d.id)}"><div class="t1">${esc(d.descricao)}</div><div class="t2">${esc(d.categoria || '')} · ${esc(nomeRec(d.recorrencia))}</div></td>
+          <td data-desp="${esc(d.id)}">Dia ${Number((d.inicio || '').slice(8, 10)) || 1}</td>
+          <td class="num" data-desp="${esc(d.id)}">${brl(d.valor)}</td>
+          <td data-desp="${esc(d.id)}"><span class="tag pg-${s}">${NOME_PG_DESP[s]}</span></td>
+          <td class="num"><button class="pago-btn ${s === 'pago' ? 'desfazer' : ''}" data-pagar-desp="${esc(d.id)}">${s === 'pago' ? 'Desfazer' : 'Marcar paga'}</button></td>
+        </tr>`; }).join('')}</tbody>
+      </table></div>
+      <div class="cards-mob">${lista.map(d => { const s = situacaoDespesa(d, k); return `<div class="card-mob" style="cursor:default">
+        <div class="tx" data-desp="${esc(d.id)}" style="cursor:pointer"><div class="t1">${esc(d.descricao)}</div><div class="t2">${brl(d.valor)} · dia ${Number((d.inicio || '').slice(8, 10)) || 1} · <span style="${s === 'atrasado' ? 'color:var(--late)' : s === 'pago' ? 'color:var(--ok)' : ''}">${NOME_PG_DESP[s]}</span></div></div>
+        <button class="pago-btn ${s === 'pago' ? 'desfazer' : ''}" data-pagar-desp="${esc(d.id)}">${s === 'pago' ? 'Desfazer' : 'Pagar'}</button></div>`; }).join('')}</div>`
+      : `<div class="vazio">${despesas.length ? 'Nenhuma despesa neste mês com esse filtro.' : 'Nenhuma despesa cadastrada ainda.'}<br><button class="btn btn-brand btn-sm" data-acao="nova-desp" style="margin-top:12px">Cadastrar despesa</button></div>`}
+    </section>
+    <section class="painel">
+      <div class="painel-h"><h2>Para onde vai o dinheiro</h2><span>${MESES_C[mesFin.getMonth()]}</span></div>
+      <div class="painel-b">
+        ${porCat.length ? porCat.map(([c, v]) => `<div class="cat-linha" style="grid-template-columns:minmax(0,220px) 1fr auto"><span class="nome">${esc(c)}</span><div class="fb-trilho"><div style="width:${v / maxCat * 100}%"></div></div><b>${brl(v)}</b></div>`).join('') : '<div class="vazio">Sem despesas neste mês.</div>'}
+      </div>
+    </section>
+  </div>`;
+}
 
-<div style="display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid #44403C">
-<div style="width: 28px; height: 28px; border-radius: 6px; background: #F97316; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 18px; font-weight: 700">Suporte de verdade</div>
-<div style="font-size: 16px; line-height: 25px; color: #D6D3D1">Falou, a gente responde. Acompanhamos o projeto depois que ele vai ao ar.</div>
-</div>
-</div>
+function formDespesa(d = {}) {
+  const nova = !d.id;
+  const k = mesChave(mesFin);
+  const inicioPadrao = d.inicio || (mesChave(new Date()) === k ? hojeISO() : k + '-10');
+  $('#camada').innerHTML = `<div class="fundo centro" id="fundo"><div class="modal" role="dialog" aria-modal="true" aria-label="${nova ? 'Nova despesa' : 'Editar despesa'}" style="max-width:560px">
+    <form id="form-desp">
+      <div class="modal-h"><h2>${nova ? 'Nova despesa' : 'Editar despesa'}</h2><button class="icon-btn" type="button" data-fechar aria-label="Fechar">${ico('fechar')}</button></div>
+      <div class="modal-b"><div class="campos">
+        <label class="full">Descrição *<input name="descricao" required value="${esc(d.descricao)}" placeholder="Ex.: ElevenLabs, domínio pixelllup.com.br, internet"></label>
+        <label>Valor (R$) *<input name="valor" required inputmode="decimal" value="${valorCampo(d.valor)}" placeholder="0,00"></label>
+        <label>Categoria<select name="categoria">${opcoes(CATEGORIAS, d.categoria || 'Ferramentas e assinaturas')}</select></label>
+        <label>Repete<select name="recorrencia">${RECORRENCIAS.map(r => `<option value="${r.id}" ${r.id === (d.recorrencia || 'mensal') ? 'selected' : ''}>${r.nome}</option>`).join('')}</select></label>
+        <label>Vencimento (1ª cobrança)<input name="inicio" type="date" required value="${esc(inicioPadrao)}"></label>
+        ${nova ? `<label class="check-linha full"><input type="checkbox" name="jaPaga"> Já está paga neste mês</label>`
+          : `<label class="full" id="campo-fim">Encerrar a partir de (opcional)<input name="fim" type="month" value="${esc(d.fim)}"></label>`}
+        <label class="full">Observação<textarea name="obs" placeholder="Forma de pagamento, cartão, login...">${esc(d.obs)}</textarea></label>
+      </div></div>
+      <div class="modal-f">
+        ${nova ? '' : `<button class="btn btn-perigo" type="button" data-excluir-desp="${esc(d.id)}" style="margin-right:auto">${ico('lixo', 16)}Excluir</button>`}
+        <button class="btn btn-ghost" type="button" data-fechar>Cancelar</button>
+        <button class="btn btn-brand" type="submit">${nova ? 'Cadastrar despesa' : 'Salvar'}</button>
+      </div>
+    </form>
+  </div></div>`;
+  $('#fundo').addEventListener('click', e => { if (e.target.id === 'fundo') fecharCamada(); });
+  $('#form-desp [name=descricao]').focus();
+  $('#form-desp').addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const f = Object.fromEntries(new FormData(ev.target).entries());
+    if (!numero(f.valor)) { toast('Coloque o valor da despesa'); return; }
+    const agora = new Date().toISOString();
+    const dados = { ...d, id: d.id || novoId(), descricao: f.descricao.trim(), valor: numero(f.valor), categoria: f.categoria,
+      recorrencia: f.recorrencia, inicio: f.inicio, fim: f.recorrencia === 'unica' ? '' : (f.fim || ''), obs: (f.obs || '').trim(),
+      pagamentos: { ...(d.pagamentos || {}) }, criadoEm: d.criadoEm || agora, atualizadoEm: agora };
+    if (nova && f.jaPaga) dados.pagamentos[mesDe(f.inicio)] = agora;
+    fecharCamada();
+    try { await store.salvarDesp(dados); toast(nova ? 'Despesa cadastrada' : 'Despesa atualizada'); } catch (e) { toast('Erro ao salvar. Tente de novo.'); }
+  });
+}
 
-</div>
-</section>
+async function alternarDespesa(id) {
+  const d = despesas.find(x => x.id === id); if (!d) return;
+  const k = mesChave(mesFin); const p = { ...(d.pagamentos || {}) };
+  const pagou = !p[k]; if (pagou) p[k] = new Date().toISOString(); else delete p[k];
+  await store.salvarDesp({ ...d, pagamentos: p, atualizadoEm: new Date().toISOString() });
+  toast(pagou ? 'Despesa marcada como paga' : 'Pagamento desfeito');
+}
 
-<!-- DÚVIDAS -->
-<section id="duvidas" style="background: #FFFFFF; color: #1C1917">
-<div style="max-width: 860px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 16px; text-align: center; align-items: center">
-<div style="font-size: 14px; letter-spacing: 0.3em; color: #57534E">DÚVIDAS FREQUENTES</div>
-<h2 style="margin: 0; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 700">Perguntas que todo <span style="color: #EA580C">cliente</span> faz.</h2>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px">
-<details class="faq" style="background: #FFF7ED; border-radius: 18px">
-<summary style="padding: 24px 28px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 18px; font-weight: 700; color: #1C1917; cursor: pointer; list-style: none">
-<span>Quanto custa um site?</span>
-<span class="sinal" style="width: 32px; height: 32px; border-radius: 8px; background: #1C1917; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; line-height: 1"></span>
-</summary>
-<p style="margin: 0; padding: 0 28px 24px; font-size: 16px; line-height: 26px; color: #57534E">Depende do que o seu negócio precisa: uma landing page é mais simples que um site com várias páginas ou um sistema. Fale com a gente e enviamos uma proposta sob medida, sem compromisso.</p>
-</details>
-<details class="faq" style="background: #FFF7ED; border-radius: 18px">
-<summary style="padding: 24px 28px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 18px; font-weight: 700; color: #1C1917; cursor: pointer; list-style: none">
-<span>Quanto tempo leva para ficar pronto?</span>
-<span class="sinal" style="width: 32px; height: 32px; border-radius: 8px; background: #1C1917; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; line-height: 1"></span>
-</summary>
-<p style="margin: 0; padding: 0 28px 24px; font-size: 16px; line-height: 26px; color: #57534E">Depende do tamanho do projeto: uma landing page fica pronta mais rápido que um site completo ou um sistema. O prazo combinado já vem escrito na proposta.</p>
-</details>
-<details class="faq" style="background: #FFF7ED; border-radius: 18px">
-<summary style="padding: 24px 28px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 18px; font-weight: 700; color: #1C1917; cursor: pointer; list-style: none">
-<span>Vocês cuidam da hospedagem?</span>
-<span class="sinal" style="width: 32px; height: 32px; border-radius: 8px; background: #1C1917; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; line-height: 1"></span>
-</summary>
-<p style="margin: 0; padding: 0 28px 24px; font-size: 16px; line-height: 26px; color: #57534E">Sim. Colocamos o seu site no ar e cuidamos da hospedagem para você não precisar se preocupar com a parte técnica.</p>
-</details>
-<details class="faq" style="background: #FFF7ED; border-radius: 18px">
-<summary style="padding: 24px 28px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 18px; font-weight: 700; color: #1C1917; cursor: pointer; list-style: none">
-<span>Funciona no celular?</span>
-<span class="sinal" style="width: 32px; height: 32px; border-radius: 8px; background: #1C1917; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; line-height: 1"></span>
-</summary>
-<p style="margin: 0; padding: 0 28px 24px; font-size: 16px; line-height: 26px; color: #57534E">Sim. Todos os projetos são pensados primeiro para o celular, que é onde a maioria dos seus clientes vai acessar.</p>
-</details>
-<details class="faq" style="background: #FFF7ED; border-radius: 18px">
-<summary style="padding: 24px 28px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 18px; font-weight: 700; color: #1C1917; cursor: pointer; list-style: none">
-<span>Atendem empresas de outras cidades?</span>
-<span class="sinal" style="width: 32px; height: 32px; border-radius: 8px; background: #1C1917; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; line-height: 1"></span>
-</summary>
-<p style="margin: 0; padding: 0 28px 24px; font-size: 16px; line-height: 26px; color: #57534E">Sim. Estamos em Ipaumirim-CE e atendemos empresas de todo o Brasil, com toda a conversa feita pelo WhatsApp.</p>
-</details>
+function confirmar(titulo, texto, botao = 'Confirmar', perigo = true) {
+  return new Promise(res => {
+    const antes = $('#camada').innerHTML;
+    const raiz = document.createElement('div');
+    raiz.innerHTML = `<div class="fundo centro" style="z-index:70"><div class="modal confirmar" role="alertdialog" aria-modal="true" aria-label="${esc(titulo)}" style="max-width:420px">
+      <div class="modal-h"><h2>${esc(titulo)}</h2></div>
+      <div class="modal-b"><p>${esc(texto)}</p></div>
+      <div class="modal-f"><button class="btn btn-ghost" data-r="0">Cancelar</button><button class="btn ${perigo ? 'btn-perigo' : 'btn-brand'}" data-r="1">${esc(botao)}</button></div>
+    </div></div>`;
+    document.body.appendChild(raiz);
+    raiz.querySelector('[data-r="1"]').focus();
+    raiz.addEventListener('click', e => { const b = e.target.closest('[data-r]'); if (!b && !e.target.classList.contains('fundo')) return; raiz.remove(); res(b ? b.dataset.r === '1' : false); });
+  });
+}
 
-</div>
-</div>
-</section>
+function exportarMes() {
+  const k = mesChave(mesFin);
+  const linhas = [['Tipo', 'Descrição', 'Detalhe', 'Vencimento', 'Valor', 'Situação']];
+  cobraveis().forEach(c => { const s = situacaoPagamento(c, mesFin); linhas.push(['Entrada', c.empresa, 'Mensalidade', c.vencimento ? 'Dia ' + c.vencimento : '', numero(c.mensalidade), NOME_PG[s]]); });
+  projetosCobraveis().forEach(c => linhas.push(['Entrada', c.empresa, 'Projeto (' + nomeCobranca(c) + ')', '', numero(c.valor), SIT_PROJ[sitProjeto(c)] + ' · recebido ' + recebidoProjeto(c).toFixed(2).replace('.', ',')]));
+  despesasDoMes(k).forEach(d => linhas.push(['Despesa', d.descricao, d.categoria || '', 'Dia ' + (Number((d.inicio || '').slice(8, 10)) || 1), numero(d.valor), NOME_PG_DESP[situacaoDespesa(d, k)]]));
+  const ent = entradasDoMes(k), sai = saidasDoMes(k);
+  linhas.push([], ['Resumo', 'Entradas recebidas', '', '', ent.total], ['Resumo', 'Despesas pagas', '', '', sai], ['Resumo', 'Lucro do mês', '', '', ent.total - sai]);
+  const cel = v => typeof v === 'number' ? v.toFixed(2).replace('.', ',') : '"' + String(v ?? '').replace(/"/g, '""') + '"';
+  const csv = '﻿' + linhas.map(l => l.map(cel).join(';')).join('\r\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+  a.download = 'financeiro-pixelup-' + k + '.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  toast('Planilha do mês baixada');
+}
 
-<!-- CTA FINAL -->
-<section id="contato" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
-<div class="cta-final" style="background: #F97316; color: #1C1917; border-radius: 18px; padding: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 18px">
-<h2 style="margin: 0; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.05; letter-spacing: -1.5px; font-weight: 700">Pronto para colocar seu negócio no topo?</h2>
-<p style="margin: 0; font-size: 18px; line-height: 28px; color: #1C1917">Conte o que você precisa. A gente responde com uma proposta sob medida, sem compromisso.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start">
-<a href="https://wa.me/5588998687855?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pixel%20Up%20e%20tenho%20interesse%20em%20contratar%20os%20servi%C3%A7os%20da%20ag%C3%AAncia.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" style="text-decoration: none; background: #1C1917; color: #FFFFFF; white-space: nowrap; font-weight: 700; font-size: 18px; padding: 18px 34px; border-radius: 999px; display: inline-flex; align-items: center; gap: 12px">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg>
-Falar no WhatsApp</a>
-<div style="font-size: 15px; color: #1C1917">Orçamento sem compromisso</div>
-</div>
-</div>
-</section>
+// =================== GAVETA DO CLIENTE ===================
+function abrirCliente(id) { abertoId = id; abaGaveta = 'resumo'; desenharGaveta(true); }
+function fecharCamada() { abertoId = null; $('#camada').innerHTML = ''; }
 
-<!-- RODAPÉ -->
-<footer style="border-top: 1px solid #292524">
-<div style="max-width: 1200px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
-<div style="display: flex; align-items: center; gap: 14px">
-<div style="position: relative; width: 44px; height: 44px; border-radius: 50%; background: #F97316; display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; flex-shrink: 0" aria-hidden="true">
-<div style="font-size: 32px; font-weight: 900; line-height: 1; color: #FFFFFF; margin-top: -2px">P</div>
-<div style="position: absolute; top: 9px; right: 7px; width: 9px; height: 9px; border-radius: 2px; background: #1C1917"></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 16px; font-weight: 700">Pixel Up · Agência Digital</div>
-<div style="font-size: 14px; color: #D6D3D1">Ipaumirim-CE · Atendimento nacional</div>
-</div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; font-size: 14px; color: #D6D3D1">
-<a href="https://www.instagram.com/pixelllup/" aria-label="Instagram da Pixel Up" style="width: 44px; height: 44px; border-radius: 12px; background: #292524; display: inline-flex; align-items: center; justify-content: center; text-decoration: none">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="#FFFFFF"></circle></svg>
-</a>
-<a href="https://wa.me/5588998687855?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pixel%20Up%20e%20tenho%20interesse%20em%20contratar%20os%20servi%C3%A7os%20da%20ag%C3%AAncia.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" style="height: 44px; box-sizing: border-box; border-radius: 999px; background: #292524; color: #FFFFFF; display: inline-flex; align-items: center; gap: 10px; padding: 0 20px 0 14px; text-decoration: none; font-weight: 700; font-size: 15px">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.5-2-1.5-2.5-2.5l.8-1-1-2z"></path></svg>
-Clique aqui</a>
-<span>© 2026 Pixel Up. Todos os direitos reservados.</span>
-</div>
-</div>
-</footer>
+function linkWhats(num) { let d = String(num || '').replace(/\D/g, ''); if (!d) return ''; if (d.length <= 11) d = '55' + d; return 'https://wa.me/' + d; }
+function linkInsta(u) { const h = String(u || '').trim().replace(/^@/, '').replace(/^https?:\/\/(www\.)?instagram\.com\//, '').replace(/\/.*$/, ''); return h ? 'https://www.instagram.com/' + encodeURIComponent(h) + '/' : ''; }
 
+function desenharGaveta(foco) {
+  const c = clientes.find(x => x.id === abertoId);
+  if (!c) { fecharCamada(); return; }
+  if ($('#camada .modal')) return; // não atropela um formulário aberto
+  const w = linkWhats(c.whatsapp), ig = linkInsta(c.instagram);
+  const notas = [...(c.notas || [])].reverse();
+  const pagos = Object.keys(c.pagamentos || {}).sort().reverse();
+  let corpo = '';
+  if (abaGaveta === 'resumo') {
+    corpo = `
+      <div class="caixa-acao">
+        <span class="kpi-ico">${ico('cal', 18)}</span>
+        <div class="tx">${c.dataAcao || c.proximaAcao
+          ? `<div class="t1">${esc(c.proximaAcao || 'Acompanhar cliente')}</div><div class="t2" style="${classeData(c.dataAcao) === 'late' ? 'color:var(--late)' : classeData(c.dataAcao) === 'hoje' ? 'color:var(--warn)' : ''}">${c.dataAcao ? esc(textoData(c.dataAcao)) : 'Sem data'}</div>`
+          : '<div class="t1">Sem próxima tarefa</div><div class="t2">Defina o próximo passo com esse cliente</div>'}</div>
+        ${c.dataAcao || c.proximaAcao ? `<button class="btn btn-sm btn-ghost" data-concluir="${esc(c.id)}">${ico('ok', 16)}Concluir</button>` : `<button class="btn btn-sm btn-ghost" data-editar="${esc(c.id)}">Definir</button>`}
+      </div>
+      <label>Etapa<select id="det-etapa">${ETAPAS.map(e => `<option value="${e.id}" ${e.id === c.status ? 'selected' : ''}>${e.nome}</option>`).join('')}</select></label>
+      <div class="det-grid">
+        <div><small>Responsável</small><b>${esc(c.responsavel || '—')}</b></div>
+        <div><small>WhatsApp</small><b>${esc(c.whatsapp || '—')}</b></div>
+        <div><small>Instagram</small><b>${esc(c.instagram || '—')}</b></div>
+        <div><small>Cidade</small><b>${esc(c.cidade || '—')}</b></div>
+        <div><small>Serviço</small><b>${esc(c.servico || '—')}</b></div>
+        <div><small>Como chegou</small><b>${esc(c.origem || '—')}</b></div>
+        <div class="full"><small>Tipo de cobrança</small><b>${esc(nomeCobranca(c))}</b></div>
+        ${temProjeto(c) ? `<div><small>Valor do projeto</small><b>${numero(c.valor) ? brl(c.valor) : '—'}</b></div>
+        <div><small>Pagamento do projeto</small><b><span class="tag pg-${sitProjeto(c)}">${SIT_PROJ[sitProjeto(c)]}</span>${sitProjeto(c) === 'sinal' && numero(c.sinal) ? ' ' + brl(c.sinal) : ''}</b></div>` : ''}
+        ${temMensal(c) ? `<div><small>Mensalidade</small><b>${numero(c.mensalidade) ? brl(c.mensalidade) : '—'}</b></div>
+        <div><small>Vencimento</small><b>${c.vencimento ? 'Dia ' + esc(c.vencimento) : '—'}</b></div>` : ''}
+        ${c.site ? `<div class="full"><small>Endereço do site</small><b><a href="${esc(/^https?:/.test(c.site) ? c.site : 'https://' + c.site)}" target="_blank" rel="noopener">${esc(c.site)}</a></b></div>` : ''}
+        <div class="full"><small>Cadastrado em</small><b>${c.criadoEm ? esc(new Date(c.criadoEm).toLocaleDateString('pt-BR')) : '—'}</b></div>
+      </div>
+      <button class="btn btn-perigo btn-sm" data-excluir="${esc(c.id)}" style="align-self:flex-start">${ico('lixo', 16)}Excluir cliente</button>`;
+  } else if (abaGaveta === 'historico') {
+    corpo = `
+      <form class="nota-add" id="form-nota"><textarea id="nota-texto" placeholder="Anotar conversa, combinado, pedido..." aria-label="Nova anotação"></textarea><button class="btn btn-brand" type="submit">Anotar</button></form>
+      <div class="timeline">${notas.length ? notas.map(n => `<div class="tl-item ${/^Etapa:/.test(n.texto) ? 'etapa' : ''}"><span class="tl-ponto"></span><div><small>${esc(new Date(n.data).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }))}</small><p>${esc(n.texto)}</p></div></div>`).join('') : '<div class="vazio">Sem anotações ainda.</div>'}</div>`;
+  } else {
+    const blocoProjeto = temProjeto(c) && numero(c.valor) ? `
+      <div class="caixa-acao"><span class="kpi-ico">${ico('dinheiro', 18)}</span><div class="tx"><div class="t1">Projeto · ${brl(c.valor)}</div><div class="t2">${SIT_PROJ[sitProjeto(c)]}${sitProjeto(c) === 'sinal' ? ' · ' + brl(c.sinal) + ' recebido' : ''}${sitProjeto(c) === 'pago' && c.projetoPagoEm ? ' em ' + esc(new Date(c.projetoPagoEm).toLocaleDateString('pt-BR')) : ''}</div></div>
+      <button class="btn btn-sm btn-ghost" data-pagar-proj="${esc(c.id)}">${sitProjeto(c) === 'pago' ? 'Desfazer' : 'Marcar pago'}</button></div>` : '';
+    corpo = blocoProjeto + (!temMensal(c) ? (blocoProjeto ? '' : '<div class="vazio">Coloque o valor do projeto no cadastro para controlar o pagamento.</div>') : numero(c.mensalidade) ? `
+      <div class="det-grid"><div><small>Mensalidade</small><b>${brl(c.mensalidade)}</b></div><div><small>Vencimento</small><b>${c.vencimento ? 'Dia ' + esc(c.vencimento) : '—'}</b></div><div class="full"><small>Meses pagos</small><b>${pagos.length}</b></div></div>
+      <div class="timeline">${pagos.length ? pagos.map(k => { const [a, m] = k.split('-'); return `<div class="tl-item"><span class="tl-ponto" style="background:var(--ok)"></span><div><small>Pago em ${esc(new Date(c.pagamentos[k]).toLocaleDateString('pt-BR'))}</small><p>${cap(MESES_C[Number(m) - 1])}/${a} · ${brl(c.mensalidade)}</p></div></div>`; }).join('') : '<div class="vazio">Nenhum pagamento registrado. Marque os pagamentos na tela Financeiro.</div>'}</div>`
+      : '<div class="vazio">Coloque o valor da mensalidade no cadastro.</div>');
+  }
+  const abas = [['resumo', 'Resumo'], ['historico', 'Histórico (' + (c.notas || []).length + ')'], ['pagamentos', 'Pagamentos']];
+  const rolagem = $('#camada .gaveta') ? $('#camada .gaveta').scrollTop : 0;
+  $('#camada').innerHTML = `<div class="fundo" id="fundo"><aside class="gaveta" role="dialog" aria-modal="true" aria-label="${esc(c.empresa)}">
+    <div class="gaveta-h">
+      <div class="gaveta-top">
+        <div class="avatar" style="width:44px;height:44px;font-size:18px">${esc((c.empresa || '?').charAt(0).toUpperCase())}</div>
+        <div style="flex:1;min-width:0"><h2>${esc(c.empresa)}</h2><div style="margin-top:6px">${tagEtapa(c.status)}</div></div>
+        <button class="icon-btn" data-fechar aria-label="Fechar">${ico('fechar')}</button>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        ${w ? `<a class="btn btn-brand btn-sm" href="${w}" target="_blank" rel="noopener">${ico('zap', 16)}WhatsApp</a>` : ''}
+        ${ig ? `<a class="btn btn-ghost btn-sm" href="${ig}" target="_blank" rel="noopener">${ico('insta', 16)}Instagram</a>` : ''}
+        <button class="btn btn-ghost btn-sm" data-editar="${esc(c.id)}">${ico('editar', 16)}Editar</button>
+      </div>
+      <div class="abas-int" role="tablist">${abas.map(([id, n]) => `<button role="tab" aria-selected="${abaGaveta === id}" class="${abaGaveta === id ? 'ativo' : ''}" data-aba-g="${id}">${n}</button>`).join('')}</div>
+    </div>
+    <div class="gaveta-b">${corpo}</div>
+  </aside></div>`;
+  $('#camada .gaveta').scrollTop = rolagem;
+  $('#fundo').addEventListener('click', e => { if (e.target.id === 'fundo') fecharCamada(); });
+  const sel = $('#det-etapa'); if (sel) sel.addEventListener('change', e => mudarEtapa(c.id, e.target.value));
+  const fn = $('#form-nota'); if (fn) fn.addEventListener('submit', async ev => {
+    ev.preventDefault(); const t = $('#nota-texto').value.trim(); if (!t) return;
+    const agora = new Date().toISOString();
+    await store.salvar({ ...c, notas: [...(c.notas || []), { data: agora, texto: t }], atualizadoEm: agora });
+    toast('Anotação salva');
+  });
+  if (foco) $('#camada [data-fechar]').focus();
+}
+
+// =================== FORMULÁRIO ===================
+const opcoes = (lista, atual) => lista.map(v => `<option ${v === atual ? 'selected' : ''}>${esc(v)}</option>`).join('');
+const valorCampo = v => numero(v) ? esc(String(numero(v)).replace('.', ',')) : '';
+
+function formCliente(c = {}) {
+  const novo = !c.id;
+  $('#camada').innerHTML = `<div class="fundo centro" id="fundo"><div class="modal" role="dialog" aria-modal="true" aria-label="${novo ? 'Novo cliente' : 'Editar cliente'}">
+    <form id="form-cliente">
+      <div class="modal-h"><h2>${novo ? 'Novo cliente' : 'Editar ' + esc(c.empresa)}</h2><button class="icon-btn" type="button" data-fechar-form aria-label="Fechar">${ico('fechar')}</button></div>
+      <div class="modal-b">
+        <div class="form-secao"><h3>EMPRESA</h3><div class="campos">
+          <label class="full">Nome da empresa *<input name="empresa" required value="${esc(c.empresa)}" placeholder="Ex.: Padaria Pão Quente"></label>
+          <label>Responsável<input name="responsavel" value="${esc(c.responsavel)}" placeholder="Nome do contato"></label>
+          <label>WhatsApp<input name="whatsapp" type="tel" inputmode="tel" value="${esc(c.whatsapp)}" placeholder="(88) 9 9999-9999"></label>
+          <label>Instagram<input name="instagram" value="${esc(c.instagram)}" placeholder="@perfil"></label>
+          <label>Cidade<input name="cidade" value="${esc(c.cidade)}" placeholder="Ipaumirim-CE"></label>
+        </div></div>
+        <div class="form-secao"><h3>NEGÓCIO</h3><div class="campos">
+          <label>Serviço<select name="servico">${opcoes(SERVICOS, c.servico || 'Site institucional')}</select></label>
+          <label>Como chegou<select name="origem">${opcoes(ORIGENS, c.origem || 'Instagram')}</select></label>
+          <label>Etapa<select name="status">${ETAPAS.map(e => `<option value="${e.id}" ${e.id === (c.status || 'interessado') ? 'selected' : ''}>${e.nome}</option>`).join('')}</select></label>
+        </div></div>
+        <div class="form-secao"><h3>COBRANÇA</h3><div class="campos">
+          <label class="full">Tipo de cobrança<select name="cobranca" id="sel-cobranca">${COBRANCAS.map(x => `<option value="${x.id}" ${x.id === tipoCobranca(c) ? 'selected' : ''}>${x.nome}</option>`).join('')}</select></label>
+          <label data-mostra="projeto">Valor do projeto (R$)<input name="valor" inputmode="decimal" value="${valorCampo(c.valor)}" placeholder="0,00"></label>
+          <label data-mostra="projeto">Pagamento do projeto<select name="projetoPago" id="sel-projpago">${Object.entries(SIT_PROJ).map(([k, n]) => `<option value="${k}" ${k === sitProjeto(c) ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+          <label data-mostra="sinal">Valor do sinal (R$)<input name="sinal" inputmode="decimal" value="${valorCampo(c.sinal)}" placeholder="0,00"></label>
+          <label data-mostra="mensal">Mensalidade (R$)<input name="mensalidade" inputmode="decimal" value="${valorCampo(c.mensalidade)}" placeholder="0,00"></label>
+          <label data-mostra="mensal">Dia do vencimento<input name="vencimento" type="number" min="1" max="31" inputmode="numeric" value="${esc(c.vencimento)}" placeholder="10"></label>
+          <label class="full">Endereço do site (quando estiver no ar)<input name="site" value="${esc(c.site)}" placeholder="empresa.com.br"></label>
+        </div></div>
+        <div class="form-secao" style="margin-bottom:0"><h3>ACOMPANHAMENTO</h3><div class="campos">
+          <label>Próxima tarefa<input name="proximaAcao" value="${esc(c.proximaAcao)}" placeholder="Ex.: Enviar proposta"></label>
+          <label>Data<input name="dataAcao" type="date" value="${esc(c.dataAcao)}"></label>
+          ${novo ? '<label class="full">Primeira anotação<textarea name="nota" placeholder="O que a pessoa quer, como foi a conversa..."></textarea></label>' : ''}
+        </div></div>
+      </div>
+      <div class="modal-f"><button class="btn btn-ghost" type="button" data-fechar-form>Cancelar</button><button class="btn btn-brand" type="submit">${novo ? 'Cadastrar cliente' : 'Salvar alterações'}</button></div>
+    </form>
+  </div></div>`;
+  $('#fundo').addEventListener('click', e => { if (e.target.id === 'fundo') fecharForm(c); });
+  $('#form-cliente [name=empresa]').focus();
+  const ajustar = () => {
+    const tipo = $('#sel-cobranca').value, sp = $('#sel-projpago').value;
+    document.querySelectorAll('#form-cliente [data-mostra]').forEach(el => {
+      const m = el.dataset.mostra;
+      const ver = m === 'projeto' ? tipo !== 'mensal' : m === 'mensal' ? tipo !== 'unico' : (tipo !== 'mensal' && sp === 'sinal');
+      el.classList.toggle('hidden', !ver);
+    });
+  };
+  $('#sel-cobranca').addEventListener('change', ajustar);
+  $('#sel-projpago').addEventListener('change', ajustar);
+  ajustar();
+  $('#form-cliente').addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const f = Object.fromEntries(new FormData(ev.target).entries());
+    const agora = new Date().toISOString();
+    const dados = {
+      ...c, id: c.id || novoId(),
+      empresa: f.empresa.trim(), responsavel: f.responsavel.trim(), whatsapp: f.whatsapp.trim(),
+      instagram: f.instagram.trim(), cidade: f.cidade.trim(), servico: f.servico, origem: f.origem, status: f.status,
+      cobranca: f.cobranca,
+      valor: f.cobranca === 'mensal' ? 0 : numero(f.valor),
+      projetoPago: f.cobranca === 'mensal' ? '' : f.projetoPago,
+      sinal: f.cobranca === 'mensal' || f.projetoPago === 'pendente' ? 0 : f.projetoPago === 'sinal' ? numero(f.sinal) : numero(c.sinal),
+      sinalEm: f.cobranca !== 'mensal' && f.projetoPago !== 'pendente' && (f.projetoPago === 'sinal' ? numero(f.sinal) : numero(c.sinal)) ? (c.sinalEm || agora) : '',
+      projetoPagoEm: f.projetoPago === 'pago' ? (c.projetoPago === 'pago' && c.projetoPagoEm ? c.projetoPagoEm : agora) : '',
+      mensalidade: f.cobranca === 'unico' ? 0 : numero(f.mensalidade),
+      vencimento: f.cobranca === 'unico' ? '' : (f.vencimento ? Number(f.vencimento) : ''),
+      site: f.site.trim(), proximaAcao: f.proximaAcao.trim(), dataAcao: f.dataAcao || '',
+      notas: [...(c.notas || [])], pagamentos: c.pagamentos || {},
+      criadoEm: c.criadoEm || agora, atualizadoEm: agora
+    };
+    if (novo && f.nota && f.nota.trim()) dados.notas.push({ data: agora, texto: f.nota.trim() });
+    if (novo || c.status !== dados.status) dados.notas.push({ data: agora, texto: 'Etapa: ' + nomeEtapa(dados.status) });
+    try {
+      $('#camada').innerHTML = '';
+      await store.salvar(dados);
+      toast(novo ? 'Cliente cadastrado' : 'Alterações salvas');
+      abrirCliente(dados.id);
+    } catch (e) { toast('Erro ao salvar. Tente de novo.'); }
+  });
+}
+function fecharForm(c) { $('#camada').innerHTML = ''; if (c && c.id) { abertoId = c.id; desenharGaveta(); } else abertoId = null; }
+
+// =================== AÇÕES ===================
+async function mudarEtapa(id, etapa) {
+  const c = clientes.find(x => x.id === id); if (!c || c.status === etapa) return;
+  const agora = new Date().toISOString();
+  await store.salvar({ ...c, status: etapa, notas: [...(c.notas || []), { data: agora, texto: 'Etapa: ' + nomeEtapa(etapa) }], atualizadoEm: agora });
+  toast('Movido para ' + nomeEtapa(etapa));
+}
+async function concluirTarefa(id) {
+  const c = clientes.find(x => x.id === id); if (!c) return;
+  const agora = new Date().toISOString();
+  await store.salvar({ ...c, proximaAcao: '', dataAcao: '', notas: [...(c.notas || []), { data: agora, texto: 'Tarefa concluída: ' + (c.proximaAcao || 'acompanhamento') }], atualizadoEm: agora });
+  toast('Tarefa concluída');
+}
+async function alternarPagamento(id) {
+  const c = clientes.find(x => x.id === id); if (!c) return;
+  const k = mesChave(mesFin); const p = { ...(c.pagamentos || {}) };
+  const pagou = !p[k]; if (pagou) p[k] = new Date().toISOString(); else delete p[k];
+  await store.salvar({ ...c, pagamentos: p, atualizadoEm: new Date().toISOString() });
+  toast(pagou ? 'Pagamento registrado' : 'Pagamento desfeito');
+}
+
+async function alternarProjeto(id) {
+  const c = clientes.find(x => x.id === id); if (!c) return;
+  const agora = new Date().toISOString();
+  const pagou = sitProjeto(c) !== 'pago';
+  await store.salvar({ ...c, projetoPago: pagou ? 'pago' : (numero(c.sinal) ? 'sinal' : 'pendente'), projetoPagoEm: pagou ? agora : '',
+    notas: [...(c.notas || []), { data: agora, texto: pagou ? 'Projeto pago: ' + brl(c.valor) : 'Pagamento do projeto desfeito' }], atualizadoEm: agora });
+  toast(pagou ? 'Pagamento do projeto registrado' : 'Pagamento desfeito');
+}
+
+function menuBackup() {
+  $('#camada').innerHTML = `<div class="fundo centro" id="fundo"><div class="modal" role="dialog" aria-modal="true" aria-label="Backup" style="max-width:460px">
+    <div class="modal-h"><h2>Backup dos dados</h2><button class="icon-btn" data-fechar aria-label="Fechar">${ico('fechar')}</button></div>
+    <div class="modal-b" style="display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;color:var(--ink3);font-size:14px">${usaFirebase ? 'Seus dados ficam salvos online no Firebase. O backup é uma cópia extra no seu computador.' : 'Modo demonstração: os dados estão só neste navegador. Baixe um backup antes de limpar o navegador ou trocar de aparelho.'}</p>
+      <button class="btn btn-ghost" id="exportar">${ico('download', 18)}Baixar backup (.json)</button>
+      <label class="btn btn-line" style="flex-direction:row;color:var(--ink);font-size:15px">Importar backup<input type="file" id="importar" accept="application/json,.json" class="hidden"></label>
+    </div>
+  </div></div>`;
+  $('#fundo').addEventListener('click', e => { if (e.target.id === 'fundo') fecharCamada(); });
+  $('#exportar').addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify({ versao: 2, clientes, despesas }, null, 2)], { type: 'application/json' }));
+    a.download = 'backup-painel-pixelup-' + hojeISO() + '.json'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+  $('#importar').addEventListener('change', async e => {
+    const file = e.target.files[0]; if (!file) return;
+    try {
+      const bruto = JSON.parse(await file.text());
+      const cl = Array.isArray(bruto) ? bruto : (bruto.clientes || []), dp = Array.isArray(bruto) ? [] : (bruto.despesas || []);
+      if (!Array.isArray(cl) || !Array.isArray(dp)) throw new Error();
+      if (!await confirmar('Importar backup', 'Importar ' + cl.length + ' clientes e ' + dp.length + ' despesas? Os que já existem serão atualizados.', 'Importar', false)) return;
+      for (const c of cl) if (c && c.id) await store.salvar(c);
+      for (const d of dp) if (d && d.id) await store.salvarDesp(d);
+      fecharCamada(); toast('Backup importado');
+    } catch (err) { toast('Arquivo de backup inválido'); }
+  });
+}
+
+// =================== ORÇAMENTOS ===================
+function salvarOrcamentos() { localStorage.setItem('pixelup-orcamentos-v1', JSON.stringify(orcamentos)); }
+
+function novoOrcamento() {
+  const o = {
+    id: 'o' + Date.now(),
+    numero: (orcamentos.length ? Math.max(...orcamentos.map(x => x.numero || 0)) : 0) + 1,
+    status: 'rascunho',
+    cliente: '', email: '', cidade: '', servico: '',
+    validade: 15,
+    obs: 'O prazo de execução será combinado após a aprovação. Pagamento via Pix.',
+    responsavel: 'João Marcelo',
+    cargo: 'Desenvolvedor Web · Pixel Up',
+    itens: [{ desc: '', qtd: 1, unitario: '' }],
+    criadoEm: new Date().toISOString()
+  };
+  orcamentos.unshift(o);
+  salvarOrcamentos();
+  return o;
+}
+
+function totalOrc(o) { return (o.itens || []).reduce((t, it) => t + (Number(it.qtd) || 1) * (Number(it.unitario) || 0), 0); }
+
+function brlInput(v) { return v === '' || v === undefined ? '' : String(Number(v) || 0).replace('.', ','); }
+
+function telaOrcamentos() {
+  if (orcAtual) { telaEditorOrc(); return; }
+  const st = s => ({ rascunho:'Rascunho', enviado:'Enviado', aprovado:'Aprovado', perdido:'Perdido' }[s] || s);
+  const cls = s => 'orc-status orc-s-' + s;
+  $('#conteudo').innerHTML = `
+  <div class="orc-editor">
+    <div class="orc-editor-h" style="justify-content:space-between">
+      <div><h2 style="margin:0;font-size:20px">Orçamentos</h2><p style="margin:4px 0 0;font-size:13px;color:var(--ink3)">${orcamentos.length} orçamento${orcamentos.length !== 1 ? 's' : ''} cadastrado${orcamentos.length !== 1 ? 's' : ''}</p></div>
+      <button class="btn btn-primary" id="btn-novo-orc">${ico('mais', 16)}Novo orçamento</button>
+    </div>
+    ${orcamentos.length === 0 ? `<div class="vazio"><p>Nenhum orçamento ainda.<br>Clique em <strong>Novo orçamento</strong> para começar.</p></div>` :
+      `<div class="orc-lista">${orcamentos.map(o => `
+      <div class="orc-card" data-editar-orc="${esc(o.id)}">
+        <div class="orc-card-info">
+          <strong>#${o.numero} · ${esc(o.cliente || 'Sem nome')}</strong>
+          <span>${esc(o.servico || '—')} · <span class="${cls(o.status)}">${st(o.status)}</span> · ${new Date(o.criadoEm).toLocaleDateString('pt-BR')}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <span class="orc-card-valor">${brl(totalOrc(o))}</span>
+          <div class="orc-card-acoes" onclick="event.stopPropagation()">
+            <button class="icon-btn" data-pdf-orc="${esc(o.id)}" title="Exportar PDF">${ico('download', 18)}</button>
+            <button class="icon-btn" style="color:var(--late)" data-del-orc="${esc(o.id)}" title="Excluir">${ico('lixo', 18)}</button>
+          </div>
+        </div>
+      </div>`).join('')}</div>`}
+  </div>`;
+  $('#btn-novo-orc').addEventListener('click', () => { orcAtual = novoOrcamento(); render(); });
+}
+
+function telaEditorOrc() {
+  const o = orcAtual;
+  const statusOpts = ['rascunho','enviado','aprovado','perdido'].map(s =>
+    `<option value="${s}" ${o.status === s ? 'selected' : ''}>${s.charAt(0).toUpperCase()+s.slice(1)}</option>`).join('');
+  $('#conteudo').innerHTML = `
+  <div class="orc-editor" id="orc-ed">
+    <div class="orc-editor-h">
+      <button class="btn btn-ghost" id="btn-voltar-orc">${ico('esq',16)}Voltar</button>
+      <h2 style="margin:0;font-size:18px;flex:1">Orçamento #${o.numero}</h2>
+      <select id="orc-status" style="width:auto;min-height:36px;padding:6px 12px;font-size:13px;font-weight:600">${statusOpts}</select>
+    </div>
+
+    <div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <label>Cliente / empresa<input id="orc-cliente" value="${esc(o.cliente)}" placeholder="Nome do cliente"></label>
+      <label>Serviço / projeto<input id="orc-servico" value="${esc(o.servico)}" placeholder="Ex: Site institucional"></label>
+      <label>E-mail (opcional)<input id="orc-email" type="email" value="${esc(o.email)}" placeholder="email@cliente.com"></label>
+      <label>Cidade<input id="orc-cidade" value="${esc(o.cidade)}" placeholder="Ipaumirim-CE"></label>
+      <label>Validade (dias)<input id="orc-validade" type="number" value="${o.validade}" min="1" max="90"></label>
+      <label>Responsável<input id="orc-resp" value="${esc(o.responsavel)}" placeholder="Seu nome"></label>
+    </div>
+
+    <div class="card">
+      <p class="orc-sec-title" style="margin-bottom:12px">Itens do orçamento</p>
+      <table class="orc-tabela">
+        <thead><tr>
+          <th>Descrição</th>
+          <th style="width:70px">Qtd</th>
+          <th style="width:130px">Valor unit.</th>
+          <th style="width:130px">Total</th>
+          <th style="width:40px"></th>
+        </tr></thead>
+        <tbody id="orc-itens">
+          ${o.itens.map((it, i) => linhaItem(it, i)).join('')}
+        </tbody>
+        <tfoot>
+          <tr class="orc-total-row">
+            <td colspan="3" style="text-align:right;font-size:13px;color:var(--ink3);padding-right:14px">TOTAL</td>
+            <td id="orc-total-td" style="font-size:16px;color:var(--brand)">${brl(totalOrc(o))}</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <button class="orc-add-item" id="btn-add-item" style="margin-top:10px">${ico('mais',16)}Adicionar item</button>
+    </div>
+
+    <div class="card">
+      <label>Observações / condições de pagamento<textarea id="orc-obs" rows="3">${esc(o.obs)}</textarea></label>
+    </div>
+
+    <div class="orc-acoes-editor">
+      <button class="btn btn-primary" id="btn-salvar-orc">${ico('ok',16)}Salvar</button>
+      <button class="btn btn-ghost" id="btn-pdf-orc">${ico('download',16)}Exportar PDF</button>
+    </div>
+  </div>`;
+
+  atualizarTotal();
+  bindEditorOrc();
+}
+
+function linhaItem(it, i) {
+  return `<tr data-idx="${i}">
+    <td><input class="it-desc" data-idx="${i}" value="${esc(it.desc || '')}" placeholder="Ex: Criação de site institucional" style="width:100%"></td>
+    <td class="td-val"><input class="it-qtd" data-idx="${i}" type="number" value="${Number(it.qtd) || 1}" min="1" style="width:100%;text-align:center"></td>
+    <td class="td-val"><input class="it-unit" data-idx="${i}" value="${brlInput(it.unitario)}" placeholder="0,00" style="width:100%;text-align:right"></td>
+    <td class="td-val it-total-${i}" style="color:var(--brand);font-weight:600">${brl((Number(it.qtd)||1)*(Number(it.unitario)||0))}</td>
+    <td class="td-rem"><button class="icon-btn" style="color:var(--late)" data-rem-item="${i}" title="Remover">${ico('fechar',14)}</button></td>
+  </tr>`;
+}
+
+function atualizarTotal() {
+  const o = orcAtual; if (!o) return;
+  const total = totalOrc(o);
+  const td = $('#orc-total-td'); if (td) td.textContent = brl(total);
+}
+
+function lerItensForm() {
+  if (!orcAtual) return;
+  orcAtual.itens.forEach((it, i) => {
+    const d = $(`.it-desc[data-idx="${i}"]`), q = $(`.it-qtd[data-idx="${i}"]`), u = $(`.it-unit[data-idx="${i}"]`);
+    if (d) it.desc = d.value;
+    if (q) it.qtd = Number(q.value) || 1;
+    if (u) { const v = u.value.replace(',', '.'); it.unitario = isNaN(Number(v)) ? 0 : Number(v); }
+  });
+}
+
+function lerCamposForm() {
+  if (!orcAtual) return;
+  lerItensForm();
+  orcAtual.cliente = $('#orc-cliente')?.value || '';
+  orcAtual.servico = $('#orc-servico')?.value || '';
+  orcAtual.email = $('#orc-email')?.value || '';
+  orcAtual.cidade = $('#orc-cidade')?.value || '';
+  orcAtual.validade = Number($('#orc-validade')?.value) || 15;
+  orcAtual.obs = $('#orc-obs')?.value || '';
+  orcAtual.responsavel = $('#orc-resp')?.value || '';
+  orcAtual.status = $('#orc-status')?.value || 'rascunho';
+}
+
+function bindEditorOrc() {
+  $('#btn-voltar-orc').addEventListener('click', () => { lerCamposForm(); salvarOrcamentos(); orcAtual = null; render(); });
+  $('#btn-salvar-orc').addEventListener('click', () => { lerCamposForm(); salvarOrcamentos(); toast('Orçamento salvo'); });
+  $('#btn-pdf-orc').addEventListener('click', () => { lerCamposForm(); salvarOrcamentos(); gerarPDFOrc(orcAtual); });
+  $('#btn-add-item').addEventListener('click', () => {
+    lerItensForm();
+    orcAtual.itens.push({ desc: '', qtd: 1, unitario: '' });
+    const tb = $('#orc-itens');
+    const idx = orcAtual.itens.length - 1;
+    tb.insertAdjacentHTML('beforeend', linhaItem(orcAtual.itens[idx], idx));
+    atualizarTotal();
+  });
+  document.getElementById('orc-ed').addEventListener('input', e => {
+    const idx = e.target.dataset.idx;
+    if (idx === undefined) return;
+    const i = Number(idx), it = orcAtual.itens[i]; if (!it) return;
+    if (e.target.classList.contains('it-desc')) it.desc = e.target.value;
+    if (e.target.classList.contains('it-qtd')) it.qtd = Number(e.target.value) || 1;
+    if (e.target.classList.contains('it-unit')) { const v = e.target.value.replace(',','.'); it.unitario = isNaN(Number(v)) ? 0 : Number(v); }
+    const cel = $(`.it-total-${i}`); if (cel) cel.textContent = brl((it.qtd||1)*(Number(it.unitario)||0));
+    atualizarTotal();
+  });
+  document.getElementById('orc-ed').addEventListener('click', e => {
+    const btn = e.target.closest('[data-rem-item]'); if (!btn) return;
+    if (orcAtual.itens.length <= 1) return;
+    const i = Number(btn.dataset.remItem);
+    lerItensForm();
+    orcAtual.itens.splice(i, 1);
+    // re-render itens
+    const tb = $('#orc-itens');
+    tb.innerHTML = orcAtual.itens.map((it, idx) => linhaItem(it, idx)).join('');
+    atualizarTotal();
+  });
+}
+
+function htmlPDFOrc(o) {
+  const hoje = new Date();
+  const dataFmt = d => d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+  const validade = new Date(hoje); validade.setDate(validade.getDate() + (Number(o.validade) || 15));
+  const total = totalOrc(o);
+  const itensHtml = (o.itens || []).filter(it => it.desc || Number(it.unitario)).map(it => {
+    const sub = (Number(it.qtd)||1) * (Number(it.unitario)||0);
+    return `<tr>
+      <td class="td-desc">${esc(it.desc || '—')}</td>
+      <td style="text-align:center">${Number(it.qtd)||1}</td>
+      <td style="text-align:right">${brl(Number(it.unitario)||0)}</td>
+      <td style="text-align:right;font-weight:700">${brl(sub)}</td>
+    </tr>`;
+  }).join('');
+
+  return `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<title>Orçamento #${o.numero} · Pixel Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#111;font-size:14px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@page{size:A4;margin:0}
+.folha{width:210mm;min-height:297mm;padding:14mm 16mm;display:flex;flex-direction:column}
+.cab{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px;border-bottom:3px solid #F97316;padding-bottom:20px}
+.logo-circ{width:52px;height:52px;border-radius:50%;background:#F97316;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:900;font-size:34px;color:#fff;position:relative;flex-shrink:0}
+.logo-circ::after{content:'';position:absolute;top:9px;right:7px;width:11px;height:11px;border-radius:2px;background:rgba(255,255,255,.25)}
+.logo-bloco{display:flex;align-items:center;gap:12px}
+.marca-txt{display:flex;flex-direction:column;gap:2px}
+.marca-txt strong{font-size:21px;font-weight:700;letter-spacing:-1px;line-height:1}
+.marca-txt strong span{color:#F97316}
+.marca-txt small{font-size:9px;letter-spacing:.35em;color:#78716C}
+.cab-info{text-align:right;font-size:12px;color:#44403C;line-height:1.6}
+.cab-info strong{display:block;font-size:17px;font-weight:700;color:#111;margin-bottom:2px}
+.sec-title{font-size:10px;font-weight:700;letter-spacing:.08em;color:#78716C;text-transform:uppercase;margin-bottom:8px}
+.dest{background:#f5f5f4;border-radius:8px;padding:12px 16px;margin-bottom:20px}
+.dest p{margin:3px 0;font-size:13px}
+.dest p strong{font-weight:600}
+table{width:100%;border-collapse:collapse;margin-bottom:14px}
+th{font-size:10px;font-weight:700;letter-spacing:.05em;color:#78716C;text-align:left;border-bottom:2px solid #E7E5E4;padding:7px 0}
+th:last-child,td:last-child{text-align:right}
+th:nth-child(2),td:nth-child(2){text-align:center}
+td{padding:9px 0;font-size:13px;border-bottom:1px solid #F5F5F4;color:#1C1917;vertical-align:top}
+.td-desc{max-width:300px}
+.total-bloco{display:flex;justify-content:flex-end;margin-bottom:20px}
+.total-box{background:#1C1917;color:#fff;border-radius:10px;padding:14px 22px;min-width:190px;text-align:right}
+.total-box .lbl{font-size:10px;letter-spacing:.06em;color:#A8A29E;text-transform:uppercase}
+.total-box .val{font-size:24px;font-weight:700;color:#F97316;margin-top:3px}
+.obs{background:#FFF7ED;border-left:4px solid #F97316;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:20px;font-size:12px;color:#44403C;line-height:1.6}
+.rodape{margin-top:auto;padding-top:20px;border-top:1px solid #E7E5E4;display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;color:#78716C}
+.assinatura{text-align:center}
+.assinatura .linha{width:180px;border-top:1.5px solid #1C1917;margin:0 auto 7px}
+.assinatura p{font-size:12px;font-weight:600;color:#1C1917;margin:0}
+.assinatura small{font-size:10px;color:#78716C}
+.validade{line-height:1.7}
+</style></head><body>
+<div class="folha">
+  <div class="cab">
+    <div class="logo-bloco">
+      <div class="logo-circ">P</div>
+      <div class="marca-txt">
+        <strong>p<span>ı</span>xelup</strong>
+        <small>AGÊNCIA DIGITAL</small>
+      </div>
+    </div>
+    <div class="cab-info">
+      <strong>ORÇAMENTO #${String(o.numero).padStart(3,'0')}</strong>
+      ${dataFmt(hoje)}<br>
+      @pixelllup · 88 99868-7855
+    </div>
+  </div>
+
+  <p class="sec-title">Para</p>
+  <div class="dest">
+    <p><strong>${esc(o.cliente || 'Cliente')}</strong></p>
+    ${o.servico ? `<p>${esc(o.servico)}</p>` : ''}
+    ${o.email ? `<p>${esc(o.email)}</p>` : ''}
+    ${o.cidade ? `<p>${esc(o.cidade)}</p>` : ''}
+  </div>
+
+  <p class="sec-title">Itens</p>
+  <table>
+    <thead><tr>
+      <th>Descrição</th>
+      <th style="width:50px">Qtd</th>
+      <th style="width:110px">Valor unit.</th>
+      <th style="width:110px">Total</th>
+    </tr></thead>
+    <tbody>${itensHtml}</tbody>
+  </table>
+
+  <div class="total-bloco">
+    <div class="total-box">
+      <div class="lbl">VALOR TOTAL</div>
+      <div class="val">${brl(total)}</div>
+    </div>
+  </div>
+
+  ${o.obs ? `<div class="obs">${esc(o.obs)}</div>` : ''}
+
+  <div class="rodape">
+    <div class="validade">
+      Orçamento válido até <strong>${dataFmt(validade)}</strong><br>
+      Sujeito a alterações após o prazo.<br>
+      Dúvidas? Entre em contato pelo WhatsApp.
+    </div>
+    <div class="assinatura">
+      <div class="linha"></div>
+      <p>${esc(o.responsavel || 'Responsável')}</p>
+      <small>${esc(o.cargo || 'Pixel Up')}</small>
+    </div>
+  </div>
 </div>
+</body></html>`;
+}
+
+function gerarPDFOrc(o) {
+  const html = htmlPDFOrc(o);
+  const frame = $('#orc-print-frame');
+  frame.style.display = 'none';
+  frame.srcdoc = html;
+  frame.onload = () => {
+    frame.contentWindow.focus();
+    frame.contentWindow.print();
+  };
+}
+
+function irPara(p) { pagina = p; $('#sidebar').classList.remove('aberta'); render(); const pr = document.querySelector('.principal'); if (pr) pr.scrollTop = 0; }
+
+// =================== EVENTOS ===================
+document.addEventListener('click', async e => {
+  const t = e.target.closest('[data-pag],[data-abrir],[data-acao],[data-fechar],[data-fechar-form],[data-editar],[data-excluir],[data-pagar],[data-mes],[data-concluir],[data-aba-g],[data-pagar-proj],[data-desp],[data-pagar-desp],[data-excluir-desp],[data-aba-fin],[data-editar-orc],[data-pdf-orc],[data-del-orc]');
+  if (!t) { if ($('#sidebar').classList.contains('aberta') && !e.target.closest('#sidebar')) $('#sidebar').classList.remove('aberta'); return; }
+  const d = t.dataset;
+  if (d.pag) { if (d.pag !== 'orcamentos') orcAtual = null; irPara(d.pag); }
+  else if (d.editarOrc) { orcAtual = orcamentos.find(x => x.id === d.editarOrc) || null; render(); }
+  else if (d.pdfOrc) { const o = orcamentos.find(x => x.id === d.pdfOrc); if (o) gerarPDFOrc(o); }
+  else if (d.delOrc) {
+    const o = orcamentos.find(x => x.id === d.delOrc);
+    if (o && await confirmar('Excluir orçamento', `Excluir o orçamento #${o.numero} de "${o.cliente || 'sem nome'}"?`, 'Excluir')) {
+      orcamentos = orcamentos.filter(x => x.id !== d.delOrc); salvarOrcamentos(); render();
+    }
+  }
+  else if (d.abrir) abrirCliente(d.abrir);
+  else if (d.abaG) { abaGaveta = d.abaG; desenharGaveta(); }
+  else if (d.acao === 'novo') { abertoId = null; if (pagina === 'despesas') formDespesa(); else if (pagina === 'orcamentos') { orcAtual = novoOrcamento(); render(); } else formCliente(); }
+  else if (d.acao === 'nova-desp') formDespesa();
+  else if (d.acao === 'exportar') exportarMes();
+  else if (d.desp) formDespesa(despesas.find(x => x.id === d.desp));
+  else if (d.pagarDesp) alternarDespesa(d.pagarDesp);
+  else if (d.abaFin) { abaFin = d.abaFin; render(); }
+  else if (d.excluirDesp) {
+    const x = despesas.find(y => y.id === d.excluirDesp);
+    if (x && await confirmar('Excluir despesa', 'Excluir "' + x.descricao + '"? O histórico de pagamentos dela também será apagado.', 'Excluir')) { fecharCamada(); await store.excluirDesp(x.id); toast('Despesa excluída'); }
+  }
+  else if (d.acao === 'menu') { e.stopPropagation(); $('#sidebar').classList.add('aberta'); }
+  else if (d.acao === 'backup') { $('#sidebar').classList.remove('aberta'); menuBackup(); }
+  else if (d.acao === 'sair') { await store.sair(); }
+  else if (t.hasAttribute('data-fechar')) fecharCamada();
+  else if (t.hasAttribute('data-fechar-form')) fecharForm(clientes.find(x => x.id === abertoId));
+  else if (d.editar) formCliente(clientes.find(x => x.id === d.editar));
+  else if (d.excluir) {
+    const c = clientes.find(x => x.id === d.excluir);
+    if (c && await confirmar('Excluir cliente', 'Excluir ' + c.empresa + '? O histórico e os pagamentos dele também serão apagados.', 'Excluir')) { fecharCamada(); await store.excluir(c.id); toast('Cliente excluído'); }
+  }
+  else if (d.pagarProj) alternarProjeto(d.pagarProj);
+  else if (d.pagar) alternarPagamento(d.pagar);
+  else if (d.concluir) concluirTarefa(d.concluir);
+  else if (d.mes) { mesFin.setMonth(mesFin.getMonth() + Number(d.mes)); render(); }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { if (document.querySelector('.confirmar')) return; if ($('#form-desp')) fecharCamada(); else if ($('#camada .modal')) fecharForm(clientes.find(x => x.id === abertoId)); else if ($('#camada').innerHTML) fecharCamada(); $('#sidebar').classList.remove('aberta'); }
+  if (e.key === 'Enter' && e.target.matches('tr[data-abrir]')) abrirCliente(e.target.dataset.abrir);
+});
+document.addEventListener('change', e => {
+  if (e.target.dataset.mover) mudarEtapa(e.target.dataset.mover, e.target.value);
+  if (e.target.id === 'f-etapa') { filtroEtapa = e.target.value; render(); }
+  if (e.target.id === 'f-servico') { filtroServico = e.target.value; render(); }
+  if (e.target.id === 'f-cat') { filtroCat = e.target.value; render(); }
+});
+document.addEventListener('input', e => {
+  if (e.target.id === 'busca') {
+    busca = e.target.value; const pos = e.target.selectionStart; render();
+    const b = $('#busca'); b.focus(); try { b.setSelectionRange(pos, pos); } catch (_) {}
+  }
+});
+
+// =================== INICIAR ===================
+pintarIcones();
+(async () => {
+  try {
+    if (usaFirebase) { store = await storeFirebase(); $('#conta-modo').textContent = 'Administrador'; }
+    else { store = storeLocal(); $('#banner-demo').classList.remove('hidden'); $('#conta-modo').textContent = 'Modo demonstração'; mostrarLogin(false); }
+    await store.iniciar(render);
+  } catch (e) {
+    console.error(e);
+    document.body.innerHTML = '<p style="padding:24px;font-family:sans-serif;color:#fff">Não foi possível carregar o painel. Verifique a internet e os dados do Firebase.</p>';
+  }
+})();
+</script>
 </body>
 </html>
